@@ -1,0 +1,9 @@
+@tailwind base;
+@layer base {
+  html {
+    @apply text-gray-600;
+    font-family: Arial, system-ui, sans-serif;
+  } 
+}
+@tailwind components;
+@tailwind utilities;
