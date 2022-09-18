@@ -14,7 +14,7 @@ const Layout: React.FC<Layout> = ({ children }) => {
         <NavSections />
         <Slider />
       </header>
-      <div className="container">{children}</div>
+      <div>{children}</div>
     </div>
   );
 };

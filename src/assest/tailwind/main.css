@@ -513,8 +513,38 @@ video {
 .left-0 {
   left: 0px;
 }
+.bottom-0 {
+  bottom: 0px;
+}
+.left-14 {
+  left: 3.5rem;
+}
+.right-0 {
+  right: 0px;
+}
+.bottom-20 {
+  bottom: 5rem;
+}
+.bottom-32 {
+  bottom: 8rem;
+}
+.bottom-48 {
+  bottom: 12rem;
+}
+.left-16 {
+  left: 4rem;
+}
+.float-left {
+  float: left;
+}
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+.block {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
 }
 .flex {
   display: flex;
@@ -525,6 +555,12 @@ video {
 .h-min {
   height: min-content;
 }
+.h-full {
+  height: 100%;
+}
+.h-screen {
+  height: 100vh;
+}
 .w-max {
   width: max-content;
 }
@@ -533,6 +569,18 @@ video {
 }
 .w-60 {
   width: 15rem;
+}
+.w-full {
+  width: 100%;
+}
+.w-screen {
+  width: 100vw;
+}
+.w-3\/5 {
+  width: 60%;
+}
+.min-w-max {
+  min-width: max-content;
 }
 @keyframes slide {
 
@@ -566,6 +614,9 @@ video {
 .items-center {
   align-items: center;
 }
+.justify-center {
+  justify-content: center;
+}
 .justify-between {
   justify-content: space-between;
 }
@@ -580,6 +631,9 @@ video {
 }
 .gap-x-2 {
   column-gap: 0.5rem;
+}
+.overflow-hidden {
+  overflow: hidden;
 }
 .overflow-x-hidden {
   overflow-x: hidden;
@@ -596,6 +650,9 @@ video {
 .border {
   border-width: 1px;
 }
+.border-0 {
+  border-width: 0px;
+}
 .border-t-0 {
   border-top-width: 0px;
 }
@@ -611,6 +668,9 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(18 27 48 / var(--tw-bg-opacity));
 }
+.bg-\[url\(\'https\:\/\/www\.rbc\.ua\/static\/img\/_\/f\/_foto_24tv__3__1300x820\.jpg\'\)\] {
+  background-image: url('https://www.rbc.ua/static/img/_/f/_foto_24tv__3__1300x820.jpg');
+}
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -619,8 +679,23 @@ video {
   --tw-gradient-to: rgb(18 27 48 / 0);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
+.bg-cover {
+  background-size: cover;
+}
+.bg-center {
+  background-position: center;
+}
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+.object-fill {
+  object-fit: fill;
+}
 .p-4 {
   padding: 1rem;
+}
+.p-0 {
+  padding: 0px;
 }
 .px-8 {
   padding-left: 2rem;
@@ -657,6 +732,12 @@ video {
 .pr-1 {
   padding-right: 0.25rem;
 }
+.text-center {
+  text-align: center;
+}
+.align-middle {
+  vertical-align: middle;
+}
 .text-base {
   font-size: 1rem;
   line-height: 1.5rem;
@@ -668,6 +749,18 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 .font-medium {
   font-weight: 500;
@@ -703,8 +796,18 @@ video {
   --tw-text-opacity: 1;
   color: rgb(253 186 116 / var(--tw-text-opacity));
 }
+.hover\:no-underline:hover {
+  text-decoration-line: none;
+}
+.hover\:outline-none:hover {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
 .focus\:border:focus {
   border-width: 1px;
+}
+.focus\:no-underline:focus {
+  text-decoration-line: none;
 }
 .focus\:outline-none:focus {
   outline: 2px solid transparent;

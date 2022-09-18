@@ -1,0 +1,206 @@
+{
+  "status": "ok",
+  "totalResults": 30,
+  "articles": [
+    {
+      "source": { "id": "google-news", "name": "Google News" },
+      "author": null,
+      "title": "Аполлон – СК Дніпро-1 – відео голів — Футбол 24 - Футбол 24",
+      "description": null,
+      "url": "https://news.google.com/__i/rss/rd/articles/CBMiQGh0dHBzOi8vZm9vdGJhbGwyNC51YS9hcG9sbG9uX19za19kbmlwcm9fMV9fdmlkZW9fZ29saXZfbjczODYzMy_SAQA?oc=5",
+      "urlToImage": null,
+      "publishedAt": "2022-09-15T18:08:28Z",
+      "content": null
+    },
+    {
+      "source": { "id": "google-news", "name": "Google News" },
+      "author": null,
+      "title": "Динамо – АЕК Ларнака: онлайн-трансляція матчу ЛЄ – Луческу визначився зі стартовим складом — Футбол 24 - Футбол 24",
+      "description": null,
+      "url": "https://news.google.com/__i/rss/rd/articles/CBMifmh0dHBzOi8vZm9vdGJhbGwyNC51YS9kaW5hbW9fX2Fla19sYXJuYWthX29ubGF5bl90cmFuc2x5YXRzaXlhX21hdGNodV9seWVfX2x1Y2hlc2t1X3Zpem5hY2hpdnN5YV96aV9zdGFydG92aW1fc2tsYWRvbV9uNzM4NjIyL9IBAA?oc=5",
+      "urlToImage": null,
+      "publishedAt": "2022-09-15T18:07:17Z",
+      "content": null
+    },
+    {
+      "source": { "id": null, "name": "Pravda.com.ua" },
+      "author": "Українська правда",
+      "title": "МЗС РФ поскаржився на \"глибоку аморальність\" організаторів церемонії поховання Єлизавети II - Українська правда",
+      "description": "",
+      "url": "https://www.pravda.com.ua/news/2022/09/15/7367664/",
+      "urlToImage": "https://img.pravda.com/images/doc/c/0/c0eeadc-zaharova-getty.jpg",
+      "publishedAt": "2022-09-15T17:51:59Z",
+      "content": null
+    },
+    {
+      "source": { "id": null, "name": "Tsn.ua" },
+      "author": "Тетяна Курпіта",
+      "title": "В Україні виявили перший випадок віспи мавп: що відомо - ТСН",
+      "description": "У четвер, 15 вересня, в Україні лабораторно підтвердили перший випадок віспи мавп.",
+      "url": "https://tsn.ua/ukrayina/v-ukrayini-viyavili-pershiy-vipadok-vispi-mavp-moz-2158753.html",
+      "urlToImage": "https://img.tsn.ua/cached/044/tsn-84ee4f9844c21d3af2b3cfbad2c9c711/thumbs/1200x630/55/72/3cbe5fa11960147521e014c1f5e57255.jpeg",
+      "publishedAt": "2022-09-15T16:25:57Z",
+      "content": ", 15 , .\r\n', .   .\r\n .\r\n\" -, . .  , \", - . \r\n , . , , , .\r\n : \r\n<ul><li>,</li><li> ,</li><li> ( '),</li><li> ,</li><li> ,</li><li>,</li><li> ,</li><li> , </li><li>,</li><li> .</li></ul> . , . , , , ,… [+16 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Eurointegration.com.ua" },
+      "author": "Європейська правда",
+      "title": "США наклали додаткові санкції на РФ у сфері передових технологій - Європейська правда",
+      "description": "Мінфін США оголосив додаткові санкції проти Росії у сфері передових технологій, заборонивши продаж чи будь-яке надання особам з РФ послуг у сфері квантових обчислень; у санкційному списку опинились близько трьох десятків російських компаній та установ.",
+      "url": "https://www.eurointegration.com.ua/news/2022/09/15/7146863/",
+      "urlToImage": "https://img.eurointegration.com.ua/images/doc/4/c/4ccbd85---------------2022-09-15-192030.png",
+      "publishedAt": "2022-09-15T16:18:11Z",
+      "content": "© 2014-2022, , eurointegration.com.ua (\r\n).E-mail : eupravda@gmail.com\r\n () \" \", www.eurointegration.com.ua. , ' - .\r\nPROMOTED ."
+    },
+    {
+      "source": { "id": null, "name": "Www.rbc.ua" },
+      "author": "Наталія Юрченко",
+      "title": "Росія посилює мобілізацію, а ЗСУ відбили всі атаки на Донбасі: зведення Генштабу - РБК-Украина",
+      "description": "Українські військові сьогодні відбили штурми біля трьох населених пунктів на Донбасі. Також ЗСУ авіацією та артилерією вдарили по складах та опорних пунктах ворога.",
+      "url": "https://www.rbc.ua/ukr/news/rossiya-usilivaet-mobilizatsiyu-vsu-otbili-1663257660.html",
+      "urlToImage": "https://www.rbc.ua/static/img/_/t/_tankisti_foto_facebookcom_ministryofdefence_ua_6_7_1300x820.jpg",
+      "publishedAt": "2022-09-15T16:01:00Z",
+      "content": ". .\r\n-.\r\n . 5 , 5 23 - .\r\n :\r\n<ul><li> - ;</li><li> - , , , , ;</li><li> - ;</li><li> - , , , , , - ;</li><li> - , , , , , , , ;</li><li>, . ;</li><li> . , - 48 .</li></ul> , . 202- 204- 2 . . . .\r\n … [+202 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Lviv.ua" },
+      "author": "ВЗ",
+      "title": "Чипси зі смаком… смартфона — Високий Замок - Високий Замок",
+      "description": "Компанія Google вирішила прорекламувати свої прийдешні смартфони лінійки Pixel 7. Пошуковий гігант випустив лімітовану серію чипсів, дизайн яких перегукується з кольорами майбутніх смартфонів",
+      "url": "https://wz.lviv.ua/news/472655-chypsy-zi-smakom-smartfona",
+      "urlToImage": "https://wz.lviv.ua/images/jursspublisher/logos/cover.png",
+      "publishedAt": "2022-09-15T15:00:44Z",
+      "content": "Google Pixel 7. , .\r\n 9To5Mac, .\r\n  — Pixel 7, Pixel 7 Pro.\r\n<ul><li>« » ,</li><li>« » — -,</li><li>« » — -,</li><li> « » — .</li></ul>\r\nPixel .\r\n . , «Google Original Chips». , , « Google»,  — , « G… [+77 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Pravda.com.ua" },
+      "author": "Українська правда",
+      "title": "По Кривому Рогу знову вдарили ракетами, у Запоріжжі повідомили про вибухи - Українська правда",
+      "description": "",
+      "url": "https://www.pravda.com.ua/news/2022/09/15/7367629/",
+      "urlToImage": "https://img.pravda.com/images/doc/d/f/df29805-clipboard01.jpg",
+      "publishedAt": "2022-09-15T14:17:14Z",
+      "content": null
+    },
+    {
+      "source": { "id": null, "name": "Pravda.com.ua" },
+      "author": "Українська правда",
+      "title": "Йде легенда: тенісист Федерер завершить кар'єру цього місяця - Українська правда",
+      "description": "",
+      "url": "https://www.pravda.com.ua/news/2022/09/15/7367625/",
+      "urlToImage": "https://img.pravda.com/images/doc/7/1/714fd6e-federer.jpg",
+      "publishedAt": "2022-09-15T13:57:25Z",
+      "content": ", ' .\r\n: \r\n : \" , . , . , . 41 . 24 1500 . \r\n , , , '\".\r\n: , ’ \" \" . \r\n: 20 \" \" -2008 . \"\" (8 ) US Open (5 ). 103 ."
+    },
+    {
+      "source": { "id": null, "name": "Radiosvoboda.org" },
+      "author": "Радіо Свобода",
+      "title": "У США представили законопроєкт про визнання Росії спонсором тероризму - Радіо Свобода",
+      "description": "Про ймовірну дату голосування в Конгресі поки не повідомляють",
+      "url": "https://www.radiosvoboda.org/a/news-senatory-ssha-rosia-sponsor-teroryzmu/32035322.html",
+      "urlToImage": "https://gdb.rferl.org/5ED904C9-3A26-44BA-BC79-4F2FA4B2BA03_w1200_r1.jpg",
+      "publishedAt": "2022-09-15T13:55:00Z",
+      "content": ", - .\r\n 14 , . .\r\n- . , , 27 .\r\n , , .\r\n . , , .\r\n , .\r\n , , , .\r\n .\r\n, «-» , .\r\n 14 -, « »."
+    },
+    {
+      "source": { "id": null, "name": "Epravda.com.ua" },
+      "author": "Економічна правда",
+      "title": "Угода на $20 мільярдів: Adobe купує дизайнерську компанію Figma - Економічна правда",
+      "description": "Американська технологічна компанія Adobe досягла угоди придбати дизайнерську компанію Figma за 20 млрд дол із прагненням розширити свої пропозиції творчих інструментів",
+      "url": "https://www.epravda.com.ua/news/2022/09/15/691532/",
+      "urlToImage": "https://eimg.pravda.com/images/doc/6/9/691532_fb_image_ukr_2022_09_15_17_15_00.png",
+      "publishedAt": "2022-09-15T13:54:45Z",
+      "content": "Adobe Figma 20 .\r\nBloomberg , Adobe .\r\n Figma, -, 2012 . : .\r\n , 10 , 200 Andreessen Horowitz Sequoia Capital.\r\nAdobe, 8%, Figma, , . Twitter, Google Netflix.\r\nFigma 200 , 400 2022 .\r\n Adobe 13% -, .… [+7 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Eurointegration.com.ua" },
+      "author": "Європейська правда",
+      "title": "Як Євросоюз визнав, що РФ веде проти нього війну - Європейська правда",
+      "description": "У середу президентка Єврокомісії Урсула фон дер Ляєн виступила у Європарламенті з щорічною промовою “Про становище Союзу” .",
+      "url": "https://www.eurointegration.com.ua/news/2022/09/15/7146842/",
+      "urlToImage": "https://img.eurointegration.com.ua/images/doc/8/0/806e64d--------1.jpg",
+      "publishedAt": "2022-09-15T13:35:50Z",
+      "content": "© 2014-2022, , eurointegration.com.ua (\r\n).E-mail : eupravda@gmail.com\r\n () \" \", www.eurointegration.com.ua. , ' - .\r\nPROMOTED ."
+    },
+    {
+      "source": { "id": null, "name": "Tsn.ua" },
+      "author": "Віра Хмельницька",
+      "title": "ДТП за участі кортежу Зеленського: ДБР відкрило кримінальне провадження - ТСН",
+      "description": "Державне бюро розслідуванню розслідуватиме ДТП за участі авто з президентом України Володимиром Зеленським, яке сталося ввечері 14 вересня.",
+      "url": "https://tsn.ua/ukrayina/dtp-za-uchasti-kortezhu-zelenskogo-dbr-vidkrila-kriminalne-provadzhennya-2158498.html",
+      "urlToImage": "https://img.tsn.ua/cached/676/tsn-45ddb1c1da8bc78232f746637fde253d/thumbs/1200x630/d4/18/ce7ace246ced350637d7a0668d5c18d4.jpeg",
+      "publishedAt": "2022-09-15T13:33:17Z",
+      "content": ", 14 .\r\n,   .\r\n.\r\n, .\r\n\" . \", - .\r\n,  14 .  , .\r\n     , , .\r\n :\r\n:"
+    },
+    {
+      "source": { "id": null, "name": "Tsn.ua" },
+      "author": "Віра Хмельницька",
+      "title": "Гороскоп на 16 вересня для всіх знаків зодіаку: день, коли з'явиться бажання жити і працювати - ТСН",
+      "description": "День, коли на підйомі все – активність, енергетика, творче натхнення.",
+      "url": "https://tsn.ua/lady/astrologiya/goroskop-na-16-veresnya-dlya-vsih-znakiv-zodiaku-den-kod-z-yavitsya-bazhannya-zhiti-i-pracyuvati-2158357.html",
+      "urlToImage": "https://img.tsn.ua/cached/631/tsn-1bfeaf6125141ee06e055fc61b5a2fa6/thumbs/1200x630/f5/72/149be2fd1ffc26f41dbd1693878372f5.jpeg",
+      "publishedAt": "2022-09-15T13:00:00Z",
+      "content": ", , , .\r\n, , ,   , . , , , , , .\r\n (21.03 20.04)\r\n 16 \r\n ,   : .\r\n (21.04 21.05)\r\n 16 \r\n - : , , .\r\n (22.05 21.06)\r\n 16 \r\n  ,    , : ,  , .\r\n (22.06 22.07)\r\n 16 \r\n   , , , , .\r\n (23.07 21.08)\r\n 16 \r\n… [+281 chars]"
+    },
+    {
+      "source": { "id": "google-news", "name": "Google News" },
+      "author": null,
+      "title": "Потап уперше з початку війни приїхав до України - ТаблоID",
+      "description": null,
+      "url": "https://news.google.com/__i/rss/rd/articles/CBMiMmh0dHBzOi8vdGFibG9pZC5wcmF2ZGEuY29tLnVhL2ZvY3VzLzYzMjJmY2U2NGRiYjgv0gEA?oc=5",
+      "urlToImage": null,
+      "publishedAt": "2022-09-15T11:09:30Z",
+      "content": null
+    },
+    {
+      "source": { "id": null, "name": "Tsn.ua" },
+      "author": "Віра Хмельницька",
+      "title": "Не \"Циганський король\": Усик назвав ім'я наступного суперника та прокоментував втечу Ф'юрі від бою за \"абсолюта\" - ТСН",
+      "description": "Чемпіон світу за версіями WBA, WBO, IBF та IBO Олександр Усик вирішив не чекати поки Тайсон Ф'юрі проведе добровільний захист титулу проти Ентоні Джошуа та обрав собі наступного суперника.",
+      "url": "https://tsn.ua/prosport/ne-ciganskiy-korol-usik-nazvav-im-ya-nastupnogo-supernika-ta-prokomentuvav-vtechu-f-yuri-vid-boyu-za-absolyuta-2158369.html",
+      "urlToImage": "https://img.tsn.ua/cached/166/tsn-15890496c3fba55a55e21f0ca3090d06/thumbs/1200x630/67/5e/0f0fc8c5ad9c2d21e67be6aa09375e67.jpeg",
+      "publishedAt": "2022-09-15T10:54:39Z",
+      "content": "WBA, WBO, IBF IBO ' .  WBA, WBO, IBF IBO ' \"\" .\r\n\" ' . , . , .\r\n, , ' . , ' . . . , . ' . , , ' , \", -  The Ring.\r\n ' .\r\n\" ? . . , , \", - .\r\n .\r\n 21 2022    ,    ( ). , ,      ,   The Ring.\r\n'   24 2… [+190 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Korrespondent.net" },
+      "author": "Людмила  Троценко",
+      "title": "Росіяни зривають концерти Олега Скрипки у Німеччині - Корреспондент.net",
+      "description": "Виконавець зазначив, що у Німеччині почали скасовувати концерти під егідою, що українці - це фашисти.",
+      "url": "https://ua.korrespondent.net/lifestyle/4516484-rosiiany-zryvauit-kontserty-oleha-skrypky-u-nimechchyni",
+      "urlToImage": "https://kor.ill.in.ua/m/190x120/2768660.jpg",
+      "publishedAt": "2022-09-15T10:53:00Z",
+      "content": "\" \" \" . , - , . , , , , , \", - .\r\n\" , , , , ! , . . , \", - ."
+    },
+    {
+      "source": { "id": null, "name": "BBC News" },
+      "author": "http://www.facebook.com/bbcnews",
+      "title": "Путін та Сі Цзіньпін в Узбекистані: чого чекати від цієї зустрічі? - BBC Україна",
+      "description": "Після того, як війна в Україні різко загострилась, а в Росії муніципальні депутати закликають до відставки Путіна, за зустріччю Сі з людиною, яку він колись називав своїм \"найкращим другом\", будуть стежити дуже уважно.",
+      "url": "https://www.bbc.com/ukrainian/features-62913190",
+      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_ukrainian/5849/production/_126710622_1918a74b-74f3-41b9-b0ba-72a3a1bb26ff.jpg",
+      "publishedAt": "2022-09-15T10:11:59Z",
+      "content": ", AFP\r\n, .\r\n 15 (). - , 2001 , , , , . \r\n , , , .\r\n , , \" \". .\r\n ? , , .\r\n ' \"\" , , , .\r\n , , .\r\n , , , .\r\n , , , . , , .\r\n , , .\r\n , , , .\r\n ' . , , .\r\n ( ) Covid-19 2020 .\r\n X ' () 16 , , , .\r\n , ,… [+99 chars]"
+    },
+    {
+      "source": { "id": null, "name": "BBC News" },
+      "author": "http://www.facebook.com/bbcnews",
+      "title": "Мілітаризація і курс на НАТО. Чи реально втілити гарантії безпеки для України - BBC Україна",
+      "description": "Якщо напрацьовані у Києві пропозиції будуть підтримані партнерами, насамперед країнами НАТО, Україна форсовано мілітаризуватиметься та ще глибше співпрацюватиме з альянсом.",
+      "url": "https://www.bbc.com/ukrainian/news-62912958",
+      "urlToImage": "https://ichef.bbci.co.uk/news/1024/branded_ukrainian/FDF4/production/_126721056_2187b4d294efce377bac9d3640362c43_1663067294_extra.jpg",
+      "publishedAt": "2022-09-15T10:02:40Z",
+      "content": ", \r\n. , , , .\r\n , - - . \r\n , , , .\r\n, . \r\n , , , , , . - , , , , .\r\n 90-, , . . \r\n .\r\n 1994 . , ' , , , - .\r\n 2014 , . \r\n , , . \r\n , : , ' , .\r\n , . , . \r\n , 23 , : \" , \"\" ... . , , , , \".\r\n , , , , … [+1144 chars]"
+    },
+    {
+      "source": { "id": null, "name": "Itc.ua" },
+      "author": "Андрій Русанов",
+      "title": "Ethereum перейшов на Proof-of-Stake – економію електроенергії можна порівняти з відключенням великої країни - ITC.ua",
+      "description": "Одна з провідних криптовалют Ethereum позбавилася необхідності у майнінгу. Ефект від цієї події, що сталася сьогодні о 9:43 за київським часом і яку називають",
+      "url": "https://itc.ua/ua/novini/ethereum-perejshov-na-proof-of-stake-ekonomiyu-elektroenergiyi-mozhna-porivnyati-z-vidklyuchennyam-velikoyi-krayini/",
+      "urlToImage": "https://itc.ua/wp-content/uploads/2022/09/hero-1.jpg",
+      "publishedAt": "2022-09-15T09:53:45Z",
+      "content": "Ethereum . , 9:43 The Merge, . Proof-of-Work (PoW), , Proof-of-Stake (PoS), .\r\n Ethereum 1% $1605 , . 4%, , , 15,5% .\r\n32 ETH , . . «» . , , ETH. , ’ .\r\nPoS “ 51%” . .\r\n, Ethereum ’ . Ethash Ethereum… [+59 chars]"
+    }
+  ]
+}
