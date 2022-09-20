@@ -1,98 +1,101 @@
-import { useEffect, useState } from 'react';
-import json from '../assest/json/news.json';
+import { useEffect, useMemo, useState } from 'react';
 import { IArticlesData } from '../react-app-env';
 import { getAllArticles } from '../services/articles';
+import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
+import SlidingArticles from './slidingArticles';
 
 const Feed = () => {
   const [atricles, setArticles] = useState<IArticlesData[]>([]);
   const [totalResults, setTotalResults] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [loadImg, setLoadImg] = useState(false);
+
+  const filterArticles = useMemo((): IArticlesData[] => {
+    const filtredAtcl = atricles.filter(
+      (a) =>
+        (a.url.includes('/news/') ||
+          a.url.includes('/exclusive/') ||
+          a.url.includes('/rubric-ato/') ||
+          a.url.includes('/news-isw-viyna-zvit/') ||
+          a.url.includes('/posts/')) &&
+        a.urlToImage !== null &&
+        !a.url.includes('sport') &&
+        !a.url.includes('/ipress.ua/')
+    );
+
+    setTotalResults(filtredAtcl.length);
+
+    return filtredAtcl;
+  }, [atricles]);
+
+  const handlePrev = () => {
+    const lastEl = filterArticles.length - 1;
+    return currentIndex === 0
+      ? setCurrentIndex(lastEl)
+      : setCurrentIndex((prev) => prev - 1);
+  };
+
+  const handleNext = () => {
+    return currentIndex === filterArticles.length - 1
+      ? setCurrentIndex(0)
+      : setCurrentIndex((prev) => prev + 1);
+  };
+
+  console.log(filterArticles.filter((x) => x.url.includes('/ipress.ua/')));
 
   useEffect(() => {
-    getAllArticles().then((response) => {
-      console.log(response);
-      setArticles(response.articles);
-      setTotalResults(response.totalResults);
-      setLoading(false);
-    });
+    const getData = async () => {
+      await getAllArticles().then((response) => {
+        setArticles(response.articles);
+        setLoading(false);
+      });
+    };
+
+    getData();
   }, []);
+
   return (
-    <main className="carousel slide relative">
-      <div className="carousel-inner relative w-full h-screen overflow-hidden">
-        {atricles.length &&
-          atricles.map((artcl, i) => {
-            const img = artcl.urlToImage;
-            return (
-              <div
-                key={i}
-                className="carousel-item active relative float-left w-full h-screen "
-              >
-                <h1 className="font-bold w-3/5 text-4xl text-white absolute bottom-48 left-16">
-                  {artcl.title}
-                </h1>
-                <img
-                  src={
-                    artcl.urlToImage
-                      ? artcl.urlToImage
-                      : '../assest/img/shadow.png'
-                  }
-                  className="block w-full h-screen object-fill"
-                  alt="Exotic Fruits"
-                />
-              </div>
-            );
-          })}
-        <button
-          className="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-          type="button"
-        ></button>
+    <div className="w-screen h-screen select-none relative bg-top-color">
+      <div className="aspect-w-16 aspwct-h-9">
+        {filterArticles.length && !loadImg ? (
+          <div
+            style={{
+              backgroundImage: `url(${filterArticles[currentIndex].urlToImage})`
+            }}
+            className="relative w-screen h-screen bg-auto bg-no-repeat bg-center shadow-inset"
+          >
+            <h2 className="absolute bottom-1/3 left-16 text-4xl leading-normal text-gray-100 w-1/2 font-bold">
+              {filterArticles[currentIndex].title}
+            </h2>
+          </div>
+        ) : (
+          <div className="flex items-center justify-center space-x-2 animate-pulse absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 gap-x-2">
+            <div className="w-6 h-6 bg-zinc-900 rounded-full animate-beat-load"></div>
+            <div className="w-6 h-6 bg-zinc-900 rounded-full animate-beat-load animation-delay-200"></div>
+            <div className="w-6 h-6 bg-zinc-900 rounded-full animate-beat-load animation-delay-400"></div>
+          </div>
+        )}
       </div>
-    </main>
-    // <main
-    //   id="carousel"
-    //   className="carousel slide relative"
-    //   data-bs-ride="carousel"
-    // >
-    //   <div className="carousel-inner relative w-full overflow-hidden">
-    //     {atricles.length &&
-    //       atricles.map((arcl, i) => (
-    //         <div
-    //           key={i}
-    //           className="carousel-item active relative float-left w-full"
-    //           // style={{ backgroundImage: `url(${arcl.urlToImage})` }}
-    //         >
-    //           <img
-    //             src={
-    //               arcl.urlToImage ? arcl.urlToImage : '../assest/img/shadow.png'
-    //             }
-    //             className="block w-full"
-    //             alt="Exotic Fruits"
-    //           />
-    //           <h2 className="text-lg text-white absolute bottom-0 left-14">
-    //             {arcl.title}
-    //           </h2>
-    //         </div>
-    //       ))}
-    //     <button
-    //       className="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
-    //       type="button"
-    //       data-bs-target="#carousel"
-    //       data-bs-slide="prev"
-    //     >
-    //       <span
-    //         className="carousel-control-prev-icon inline-block bg-no-repeat"
-    //         aria-hidden="true"
-    //       ></span>
-    //       <span className="visually-hidden">Previous</span>
-    //     </button>
-    //     <button
-    //       className="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
-    //       type="button"
-    //       data-bs-target="#carousel"
-    //       data-bs-slide="next"
-    //     ></button>
-    //   </div>
-    // </main>
+      <SlidingArticles topArticles={filterArticles} index={currentIndex} />
+      <div className="absolute w-1/2 bottom-1/4 left-16 px-3 flex gap-x-8 items-center text-gray-100">
+        <button
+          className="w-8 h-8 border border-gray-100 rounded-full p-1 flex justify-center items-center text-xl"
+          onClick={handlePrev}
+        >
+          <BiChevronLeft />
+        </button>
+        <div className="whitespace-pre text-lg font-medium">
+          {currentIndex + 1} / {filterArticles.length}
+        </div>
+        <button
+          className="w-8 h-8 border border-gray-100 rounded-full p-1 flex justify-center items-center text-xl"
+          onClick={handleNext}
+        >
+          <BiChevronRight />
+        </button>
+      </div>
+    </div>
   );
 };
 
