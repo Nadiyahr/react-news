@@ -20,8 +20,7 @@ const Feed = () => {
           a.url.includes('/news-isw-viyna-zvit/') ||
           a.url.includes('/posts/')) &&
         a.urlToImage !== null &&
-        !a.url.includes('sport') &&
-        !a.url.includes('/ipress.ua/')
+        !a.url.includes('sport')
     );
 
     setTotalResults(filtredAtcl.length);
@@ -56,14 +55,14 @@ const Feed = () => {
   }, []);
 
   return (
-    <div className="w-screen h-screen select-none relative bg-top-color">
+    <section className="w-screen h-screen select-none relative bg-top-color">
       <div className="aspect-w-16 aspwct-h-9">
         {filterArticles.length && !loadImg ? (
           <div
             style={{
               backgroundImage: `url(${filterArticles[currentIndex].urlToImage})`
             }}
-            className="relative w-screen h-screen bg-auto bg-no-repeat bg-center shadow-inset"
+            className="relative w-screen h-screen bg-contain bg-center shadow-inset"
           >
             <h2 className="absolute bottom-1/3 left-16 text-4xl leading-normal text-gray-100 w-1/2 font-bold">
               {filterArticles[currentIndex].title}
@@ -95,7 +94,7 @@ const Feed = () => {
           <BiChevronRight />
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 

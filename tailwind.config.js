@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./src/**/*.{js,jsx,tx,tsx}', './public/index.html'],
+  variants: {
+    extend: {
+      backgroundColor: ['active']
+    }
+  },
   theme: {
     fontFamily: {
       sans: ['Arial', 'sans-serif'],
