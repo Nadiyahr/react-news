@@ -25,6 +25,17 @@ export const ContextWrapper: React.FC<Props> = ({ children }) => {
   const [index, dispatchIndex] = useReducer(indexReducer, 0);
   const [topNewsData, setTopNewsData] = useState<IArticlesData[]>([]);
 
+  useEffect(() => {
+    const getData = async () => {
+      await getAllArticles().then((response) => {
+        setTopNewsData(response.articles);
+        setLoading(false);
+      });
+    };
+
+    getData();
+  }, []);
+
   return (
     <GlobalContext.Provider
       value={{

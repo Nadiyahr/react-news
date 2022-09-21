@@ -1,18 +1,20 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useContext, useEffect, useMemo, useState } from 'react';
 import { IArticlesData } from '../react-app-env';
 import { getAllArticles } from '../services/articles';
 import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
 import SlidingArticles from './slidingArticles';
+import { GlobalContext } from '../context/GlobalContext';
 
 const Feed = () => {
-  const [atricles, setArticles] = useState<IArticlesData[]>([]);
+  const { topNewsData } = useContext(GlobalContext);
+  // const [atricles, setArticles] = useState<IArticlesData[]>([]);
   const [totalResults, setTotalResults] = useState(0);
   const [loading, setLoading] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [loadImg, setLoadImg] = useState(false);
 
   const filterArticles = useMemo((): IArticlesData[] => {
-    const filtredAtcl = atricles.filter(
+    const filtredAtcl = topNewsData.filter(
       (a) =>
         (a.url.includes('/news/') ||
           a.url.includes('/exclusive/') ||
@@ -26,7 +28,7 @@ const Feed = () => {
     setTotalResults(filtredAtcl.length);
 
     return filtredAtcl;
-  }, [atricles]);
+  }, [topNewsData]);
 
   const handlePrev = () => {
     const lastEl = filterArticles.length - 1;
@@ -43,16 +45,16 @@ const Feed = () => {
 
   console.log(filterArticles.filter((x) => x.url.includes('/ipress.ua/')));
 
-  useEffect(() => {
-    const getData = async () => {
-      await getAllArticles().then((response) => {
-        setArticles(response.articles);
-        setLoading(false);
-      });
-    };
+  // useEffect(() => {
+  //   const getData = async () => {
+  //     await getAllArticles().then((response) => {
+  //       setArticles(response.articles);
+  //       setLoading(false);
+  //     });
+  //   };
 
-    getData();
-  }, []);
+  //   getData();
+  // }, []);
 
   return (
     <section className="w-screen h-screen select-none relative bg-top-color">

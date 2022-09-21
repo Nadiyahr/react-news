@@ -1,11 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
+import { ContextWrapper } from './context/ContextWrapper';
 import Home from './pages/home';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-    </Routes>
+    <ContextWrapper>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </ContextWrapper>
   );
 }
 

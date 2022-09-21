@@ -1,12 +1,13 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { IArticlesData } from '../react-app-env';
 import { getAllArticles } from '../services/articles';
 import { FaCamera } from 'react-icons/fa';
 import { AiTwotoneFire, AiOutlineReload } from 'react-icons/ai';
+import { GlobalContext } from '../context/GlobalContext';
 
 const SidebarAllNews = () => {
+  const { topNewsData } = useContext(GlobalContext);
   const [selected, setSelected] = useState(0);
-  const [atricles, setArticles] = useState<IArticlesData[]>([]);
   const [rangeDisplayNews, setRangeDisplayNews] = useState<Array<number>>([
     0, 9
   ]);
@@ -25,16 +26,6 @@ const SidebarAllNews = () => {
     setRangeDisplayNews(newRange);
   };
 
-  useEffect(() => {
-    const getData = async () => {
-      await getAllArticles().then((response) => {
-        setArticles(response.articles);
-      });
-    };
-
-    getData();
-  }, []);
-
   return (
     <section className="w-1/4 h-fit bg-white border rounded-md p-6">
       <div className="flex justify-between items-center">
@@ -47,6 +38,7 @@ const SidebarAllNews = () => {
         {buttons.map((btn, i) => (
           <button
             key={i}
+            onClick={() => setSelected(i)}
             className={`rounded hover:bg-orange-100 active:bg-orange-100 px-2 ${
               selected === i && 'bg-orange-100'
             }`}
@@ -56,7 +48,7 @@ const SidebarAllNews = () => {
         ))}
       </div>
       <div>
-        {atricles.map((artcl, i) => {
+        {topNewsData.map((artcl, i) => {
           if (i >= rangeDisplayNews[0] && i < rangeDisplayNews[1]) {
             return (
               <div key={i} className="ms:w-64 mb-6">
