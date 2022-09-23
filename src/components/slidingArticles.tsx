@@ -7,8 +7,8 @@ type Props = {
 
 const SlidingArticles: React.FC<Props> = ({ topArticles, index }) => {
   return (
-    <div className="px-8 py-1 overflow-x-hiden absolute no-sctollbar bottom-2 left-3 w-screen">
-      <div className="flex overflow-x-auto no-sctollbar gap-x-10">
+    <div className="px-4 lg:px-16 py-1 overflow-hiden sticky no-sctollbar top-[80%] left-3 w-screen">
+      <div className="flex overflow-x-auto no-sctollbar gap-x-7">
         {topArticles.map((artcl, i) => (
           <div
             key={i}

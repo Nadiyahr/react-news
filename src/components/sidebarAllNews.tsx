@@ -1,6 +1,4 @@
 import { useContext, useEffect, useState } from 'react';
-import { IArticlesData } from '../react-app-env';
-import { getAllArticles } from '../services/articles';
 import { FaCamera } from 'react-icons/fa';
 import { AiTwotoneFire, AiOutlineReload } from 'react-icons/ai';
 import { GlobalContext } from '../context/GlobalContext';
@@ -27,10 +25,13 @@ const SidebarAllNews = () => {
   };
 
   return (
-    <section className="w-1/4 h-fit bg-white border rounded-md p-6">
-      <div className="flex justify-between items-center">
-        <h4 className=" block text-2xl">Всі новини</h4>
-        <a href="/" className="underline">
+    <section className="lg:w-1/4 w-full h-fit bg-white border rounded-md p-6">
+      <div className="flex justify-between items-center text-neutral-700">
+        <h4 className=" block text-2xl font-semibold">Всі новини</h4>
+        <a
+          className="text-sm border-0 border-b-2 border-neutral-700 hover:text-base"
+          href="/"
+        >
           Архів
         </a>
       </div>
@@ -66,7 +67,7 @@ const SidebarAllNews = () => {
                     Термінова новина
                   </span>
                 )}
-                <span className="font-thin text-sm text-gray-400">
+                <span className="font-thin text-sm text-gray-400 leading-5">
                   {getTime(artcl.publishedAt)}
                 </span>
                 {'  '}

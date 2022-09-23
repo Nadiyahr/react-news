@@ -10,7 +10,7 @@ import {
 const NavBar: React.FC = () => {
   const [title, setTitle] = useState('');
   return (
-    <nav className="px-8 py-1 text-base flex justify-between font-medium border border-gray-200">
+    <nav className="px-16 py-1 text-base flex justify-between font-medium border border-gray-200">
       <div className="flex items-center gap-x-4">
         <button className="flex text-lg bg-gray-ligt hover:bg-gray-200 cursor-pointer rounded py-1 px-2">
           <span className="pt-1 pr-2">

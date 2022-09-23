@@ -9,7 +9,7 @@ import {
 
 const Slider = () => {
   return (
-    <div className="px-8 py-1 flex bg-blue-night">
+    <div className="px-4 lg:px-16 py-1 flex bg-blue-night">
       <div className="text-white h-min bg-blue-night w-60 sticky top-0 left-0">
         131&nbsp;день&nbsp;війни:
       </div>
