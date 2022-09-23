@@ -2,8 +2,26 @@
 @layer base {
   html {
     @apply text-gray-600;
-    font-family: Arial, system-ui, sans-serif;
-  } 
+    font-family: 'Poppins', sans-serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  button {
+    color: #182840;
+  }
+
+  ol,
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-indent: 0;
+  }
 }
 @tailwind components;
 @tailwind utilities;
@@ -31,7 +49,17 @@
     -moz-box-shadow: inset 10px 10px 50px #fff;
     -webkit-box-shadow: inset 10px 10px 50px #fff;
     box-shadow: inset 0px 0px 40px 70px rgba(60, 55, 58, 0.8);
-  } 
+  }
+
+  .blue-main {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .primary-blue {
+    color: #979EA9;
+  }
 }
 
 html,

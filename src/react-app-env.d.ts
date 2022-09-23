@@ -26,3 +26,30 @@ interface IData {
   totalResults: number;
   articles: IArticlesData[];
 }
+
+interface IArticlesDataGit {
+  title: string;
+  link: string;
+  keywords: null | string;
+  creator: null | string;
+  video_url: null | string;
+  description: string;
+  content: null | string;
+  pubDate: Date;
+  image_url: string;
+  source_id: string;
+  country: string[];
+  category: string[];
+  language: string;
+}
+
+interface IDataGit {
+  status: string;
+  totalResults: number;
+  results: IArticlesDataGit[];
+}
+
+type LoadButton = {
+  type: 'square' | 'circle';
+  name: string;
+};

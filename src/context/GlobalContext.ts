@@ -1,17 +1,28 @@
 import React from 'react';
-import { IArticlesData } from '../react-app-env';
+import { IArticlesData, IArticlesDataGit } from '../react-app-env';
 
-export type ActionType = 'PREV' | 'NEXT';
+export type ActionType = 'PREV' | 'NEXT' | 'SET';
+
+export type Action = {
+  type: ActionType;
+  payload: number;
+};
+
+export type IndexState = {
+  index: number;
+};
 
 export interface INewsContext {
   topNewsData: IArticlesData[] | [];
   setTopNewsData: (data: IArticlesData[]) => void;
+  // topNewsData: IArticlesDataGit[] | [];
+  // setTopNewsData: (data: IArticlesDataGit[]) => void;
   totalResults: number;
   setTotalResults: (totRes: number) => void;
   loading: boolean;
   setLoading: (val: boolean) => void;
-  index: number;
-  dispatchIndex: (payload: ActionType) => void;
+  index: IndexState;
+  dispatchIndex: React.Dispatch<Action>;
 }
 
 export const defaultState = {
@@ -21,7 +32,7 @@ export const defaultState = {
   setTotalResults: () => {},
   loading: false,
   setLoading: () => {},
-  index: 0,
+  index: { index: 0 },
   dispatchIndex: () => {}
 };
 
