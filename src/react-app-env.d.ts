@@ -53,3 +53,8 @@ type LoadButton = {
   type: 'square' | 'circle';
   name: string;
 };
+
+type SizeColumn = {
+  width: string;
+  height: string;
+};
