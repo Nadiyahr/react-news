@@ -1,30 +1,26 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../context/GlobalContext';
-import { LoadButton } from '../react-app-env';
 import ColumnArticles from './columnArticles';
-import OurChoices from './ourChiose';
+import LeftSideNews from './leftSideNews';
 
 const Main = () => {
-  const { topNewsData } = useContext(GlobalContext);
-  const buttons = ['Всі', 'Новини', 'Статті'];
-  const loadMore: LoadButton = {
-    type: 'square',
-    name: 'Завантажити ще'
-  };
+  const { isDesktopOrLaptop, isMobile, isTablet } = useContext(GlobalContext);
+  const [style, setStyle] = useState('');
+
+  useEffect(() => {
+    if (isMobile || isTablet) {
+      setStyle('flex-row p-0 w-screen');
+    }
+
+    if (isDesktopOrLaptop) {
+      setStyle('flex p-16 w-fill');
+    }
+  }, [isDesktopOrLaptop]);
 
   return (
-    <main className="bg-neutral-200 lg:flex flex-row p-0 lg:p-16 w-screen lg:w-fill ">
-      <ColumnArticles
-        buttons={buttons}
-        title="Всі новини"
-        span="Архів"
-        range={[0, 9]}
-        loadButton={loadMore}
-        data={topNewsData}
-        icons={true}
-        size={{ width: 'w-[300px]', height: 'h-[1506px]' }}
-      />
-      <OurChoices />
+    <main className={`bg-neutral-200 ${style}`}>
+      <ColumnArticles />
+      <LeftSideNews />
     </main>
   );
 };

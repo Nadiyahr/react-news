@@ -23,6 +23,10 @@ export interface INewsContext {
   setLoading: (val: boolean) => void;
   index: IndexState;
   dispatchIndex: React.Dispatch<Action>;
+  isDesktopOrLaptop: boolean;
+  isTablet: boolean;
+  isMobile: boolean;
+  isNotMobile: boolean;
 }
 
 export const defaultState = {
@@ -33,7 +37,11 @@ export const defaultState = {
   loading: false,
   setLoading: () => {},
   index: { index: 0 },
-  dispatchIndex: () => {}
+  dispatchIndex: () => {},
+  isDesktopOrLaptop: false,
+  isTablet: false,
+  isMobile: false,
+  isNotMobile: true
 };
 
 export const GlobalContext = React.createContext<INewsContext>(defaultState);

@@ -4,6 +4,7 @@ import { useAsyncValue } from 'react-router-dom';
 import { IArticlesData, IArticlesDataGit, IData } from '../react-app-env';
 import { getAllArticles } from '../services/articles';
 import { getAllArticlesForGit } from '../services/articlesGit';
+import { useMediaQuery } from 'react-responsive';
 import {
   Action,
   ActionType,
@@ -49,6 +50,26 @@ export const ContextWrapper: React.FC<Props> = ({ children }) => {
   );
   const [topNewsData, setTopNewsData] = useState<IArticlesData[]>([]);
   // const [topNewsData, setTopNewsData] = useState<IArticlesDataGit[]>([]);
+  const isDesktopOrLaptop = useMediaQuery({ minWidth: 992 });
+  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 });
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isNotMobile = useMediaQuery({ minWidth: 768 });
+  // const Desktop = ({ children }) => {
+  //   const isDesktop = useMediaQuery({ minWidth: 992 })
+  //   return isDesktop ? children : null
+  // }
+  // const Tablet = ({ children }) => {
+  //   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 })
+  //   return isTablet ? children : null
+  // }
+  // const Mobile = ({ children }) => {
+  //   const isMobile = useMediaQuery({ maxWidth: 767 })
+  //   return isMobile ? children : null
+  // }
+  // const Default = ({ children }) => {
+  //   const isNotMobile = useMediaQuery({ minWidth: 768 })
+  //   return isNotMobile ? children : null
+  // }
 
   useEffect(() => {
     // const getData = async () => {
@@ -67,6 +88,7 @@ export const ContextWrapper: React.FC<Props> = ({ children }) => {
         .then((response) => {
           setTopNewsData(response.articles);
           setLoading(false);
+          setTotalResults(9);
         })
         .catch(console.error);
     };
@@ -84,7 +106,11 @@ export const ContextWrapper: React.FC<Props> = ({ children }) => {
         loading,
         setLoading,
         index,
-        dispatchIndex
+        dispatchIndex,
+        isDesktopOrLaptop,
+        isTablet,
+        isMobile,
+        isNotMobile
       }}
     >
       {children}

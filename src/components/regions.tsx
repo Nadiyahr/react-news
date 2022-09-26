@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { GlobalContext } from '../context/GlobalContext';
 import ColumnArticles from './columnArticles';
+import ColumnRgions from './columsRegions';
 
 const Regions = () => {
   const { topNewsData } = useContext(GlobalContext);
@@ -17,30 +18,9 @@ const Regions = () => {
         </a>
       </div>
       <div className="grid grid-cols-3 gap-4 place-content-stretch">
-        <ColumnArticles
-          title="Київ"
-          range={[0, 5]}
-          loadButton={{ type: 'circle', name: 'Більше новин' }}
-          data={topNewsData}
-          icons={false}
-          size={{ width: 'w-[290px]', height: 'h-[760px]' }}
-        />
-        <ColumnArticles
-          title="Одеса"
-          range={[5, 10]}
-          loadButton={{ type: 'circle', name: 'Більше новин' }}
-          data={topNewsData}
-          icons={false}
-          size={{ width: 'w-[290px]', height: 'h-[760px]' }}
-        />
-        <ColumnArticles
-          title="Харків"
-          range={[10, 15]}
-          loadButton={{ type: 'circle', name: 'Більше новин' }}
-          data={topNewsData}
-          icons={false}
-          size={{ width: 'w-[290px]', height: 'h-[760px]' }}
-        />
+        <ColumnRgions title="Київ" data={topNewsData} />
+        <ColumnRgions title="Одеса" data={topNewsData} />
+        <ColumnRgions title="Харків" data={topNewsData} />
       </div>
     </section>
   );
