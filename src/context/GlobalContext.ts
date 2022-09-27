@@ -1,5 +1,5 @@
 import React from 'react';
-import { IArticlesData, IArticlesDataGit } from '../react-app-env';
+import { IArticlesDataGit } from '../react-app-env';
 
 export type ActionType = 'PREV' | 'NEXT' | 'SET';
 
@@ -13,8 +13,6 @@ export type IndexState = {
 };
 
 export interface INewsContext {
-  // topNewsData: IArticlesData[] | [];
-  // setTopNewsData: (data: IArticlesData[]) => void;
   topNewsData: IArticlesDataGit[] | [];
   setTopNewsData: (data: IArticlesDataGit[]) => void;
   totalResults: number;

@@ -1,22 +1,8 @@
-import { log } from 'console';
 import { useEffect, useReducer, useState } from 'react';
-import { useAsyncValue } from 'react-router-dom';
-import {
-  IArticlesData,
-  IArticlesDataGit,
-  IData,
-  IDataGit
-} from '../react-app-env';
-// import { getAllArticles } from '../services/articles';
+import { IArticlesDataGit, IDataGit } from '../react-app-env';
 import { getAllArticlesForGit } from '../services/articlesGit';
 import { useMediaQuery } from 'react-responsive';
-import {
-  Action,
-  ActionType,
-  GlobalContext,
-  INewsContext,
-  IndexState
-} from './GlobalContext';
+import { Action, GlobalContext, IndexState } from './GlobalContext';
 import { KHARKIV, KYIV, ODESSA, TOP } from '../services/varsApi';
 
 interface Props {
@@ -48,7 +34,6 @@ const indexReducer = (state: IndexState, action: Action) => {
 type R = ReturnType<typeof indexReducer>;
 
 export const ContextWrapper: React.FC<Props> = ({ children }) => {
-  // const [topNewsData, setTopNewsData] = useState<IArticlesData[]>([]);
   const [totalResults, setTotalResults] = useState(0);
   const [loading, setLoading] = useState(true);
   const [topNewsData, setTopNewsData] = useState<IArticlesDataGit[]>([]);
@@ -69,40 +54,31 @@ export const ContextWrapper: React.FC<Props> = ({ children }) => {
       await getAllArticlesForGit(TOP)
         .then((response: IDataGit) => {
           setTopNewsData(response.results);
-        })
-        .catch(console.error);
-      await getAllArticlesForGit(KYIV)
-        .then((response: IDataGit) => {
           setKyivNews(response.results);
-        })
-        .catch(console.error);
-      await getAllArticlesForGit(ODESSA)
-        .then((response: IDataGit) => {
           setOdessaNews(response.results);
-        })
-        .catch(console.error);
-      await getAllArticlesForGit(KHARKIV)
-        .then((response: IDataGit) => {
           setKharkivNews(response.results);
         })
         .catch(console.error);
+      // await getAllArticlesForGit(KYIV)
+      //   .then((response: IDataGit) => {
+      //     setKyivNews(response.results);
+      //   })
+      //   .catch(console.error);
+      // await getAllArticlesForGit(ODESSA)
+      //   .then((response: IDataGit) => {
+      //     setOdessaNews(response.results);
+      //   })
+      //   .catch(console.error);
+      // await getAllArticlesForGit(KHARKIV)
+      //   .then((response: IDataGit) => {
+      //     setKharkivNews(response.results);
+      //   })
+      //   .catch(console.error);
 
       setLoading(false);
     };
 
     getData();
-
-    // const getData = async () => {
-    //   await getAllArticles()
-    //     .then((response) => {
-    //       setTopNewsData(response.articles);
-    //       setLoading(false);
-    //       setTotalResults(9);
-    //     })
-    //     .catch(console.error);
-    // };
-
-    // getData();
   }, []);
 
   return (
@@ -129,5 +105,3 @@ export const ContextWrapper: React.FC<Props> = ({ children }) => {
     </GlobalContext.Provider>
   );
 };
-
-// export default ContextWrapper;

@@ -23,25 +23,11 @@ const OurChoices = () => {
   };
 
   const ourChoices = useMemo((): IArticlesDataGit[] => {
-    return topNewsData.filter(
-      (a) => a.category.includes('top') && a.image_url !== null
-    );
-    //   (a) =>
-    //     (a.url.includes('/news/') ||
-    //       a.url.includes('/exclusive/') ||
-    //       a.url.includes('/rubric-ato/') ||
-    //       a.url.includes('/news-isw-viyna-zvit/') ||
-    //       a.url.includes('/posts/') ||
-    //       a.url.includes('/war/') ||
-    //       a.url.includes('/ato/') ||
-    //       a.url.includes('/novyna/') ||
-    //       a.url.includes('/ukrayina/')) &&
-    //     !a.url.includes('sport')
-    // );
+    return topNewsData.filter((a) => a.category.includes('top'));
   }, [topNewsData]);
   return (
-    <section>
-      <h3 className="text-3xl font-bold pt-4 lg:pt-0 pb-6 text-blue-main">
+    <section className=" md:min-h-1/2">
+      <h3 className="text-3xl font-bold pt-4 lg:pt-0 pb-6 text-blue-main pl-1">
         Вибір редакції
       </h3>
       {isMobile && (

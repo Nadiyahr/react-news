@@ -3,7 +3,7 @@ import { FaCamera } from 'react-icons/fa';
 import { AiTwotoneFire } from 'react-icons/ai';
 import { getTime } from '../../assest/utils/utils';
 import { GlobalContext } from '../../context/GlobalContext';
-import { IArticlesData, IArticlesDataGit } from '../../react-app-env';
+import { IArticlesDataGit } from '../../react-app-env';
 import { SquarBtn } from '../buttons/loadMoreBtns';
 
 const ColumnArticles = () => {
@@ -24,7 +24,7 @@ const ColumnArticles = () => {
   }, [topNewsData]);
 
   return (
-    <section className="relative bg-white border rounded-md p-6 w-screen lg:w-[300px] h-fit lg:min-h-[1416px]">
+    <section className="relative bg-white border rounded-md p-6 w-screen lg:w-[300px] h-full">
       <div className="flex justify-between items-center text-blue-main">
         <h4
           className={`block text-2xl font-semibold ${
@@ -53,7 +53,7 @@ const ColumnArticles = () => {
           </button>
         ))}
       </div>
-      <div className=" overflow-y-auto min-h-[93%] max-h-[90%] no-sctollbar">
+      <div className=" overflow-y-auto h-[90%] no-sctollbar">
         {topNews.map((artcl, i) => {
           return (
             <div key={i} className="ms:w-64 mb-6 blue-main">

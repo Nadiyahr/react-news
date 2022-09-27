@@ -3,8 +3,7 @@ import {
   GiMissileLauncher,
   GiHelicopter,
   GiJetFighter,
-  GiFrankensteinCreature,
-  GiBattleTank
+  GiFrankensteinCreature
 } from 'react-icons/gi';
 
 const Slider = () => {

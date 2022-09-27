@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import {
   IArticlesData,
@@ -14,7 +14,6 @@ type Props = {
 };
 
 const ColumnRgions: React.FC<Props> = ({ title, data }) => {
-  const [selected, setSelected] = useState(0);
   const [rangeDisplayNews, setRangeDisplayNews] = useState([0, 5]);
 
   const loadMore = () => {
@@ -24,7 +23,7 @@ const ColumnRgions: React.FC<Props> = ({ title, data }) => {
   };
 
   return (
-    <section className="relative bg-white border rounded-md p-4 md:p-6 min-w-[290px]">
+    <section className="relative bg-white border rounded-md p-4 md:p-6 min-w-[290px] h-full">
       <div className="text-blue-main">
         <h4 className="block text-2xl font-semibold pb-8">{title}</h4>
       </div>

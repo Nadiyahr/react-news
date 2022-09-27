@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { GlobalContext } from '../../context/GlobalContext';
-import { IArticlesData, IArticlesDataGit } from '../../react-app-env';
+import { IArticlesDataGit } from '../../react-app-env';
 
 type Props = {
   topArticles: IArticlesDataGit[];
@@ -9,7 +9,7 @@ type Props = {
 const SlidingArticles: React.FC<Props> = ({ topArticles }) => {
   const { index, dispatchIndex } = useContext(GlobalContext);
   return (
-    <div className="px-3 lg:px-16 py-1 overflow-hiden sticky no-sctollbar top-[77%] left-2 w-screen">
+    <div className="px-0 md:px-3 lg:px-16 py-1 overflow-hiden sticky no-sctollbar top-[77%] left-2 w-screen">
       <div className="flex overflow-x-auto no-sctollbar gap-x-7">
         {topArticles.map((artcl, i) => (
           <div

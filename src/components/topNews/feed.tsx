@@ -1,29 +1,16 @@
-import { useContext, useMemo, useState } from 'react';
-import { IArticlesData, IArticlesDataGit } from '../../react-app-env';
+import { useContext, useMemo } from 'react';
+import { IArticlesDataGit } from '../../react-app-env';
 import SlidingArticles from './slidingArticles';
 import { GlobalContext } from '../../context/GlobalContext';
 import BallLoader from '../loaders.tsx/ballLoader';
 import SliderControlers from '../buttons/sliderControllers';
+import Image from '../image';
 
 const Feed = () => {
   const { topNewsData, loading, index } = useContext(GlobalContext);
 
   const filterArticles = useMemo((): IArticlesDataGit[] => {
-    const filtredAtcl = topNewsData.filter(
-      (a) => a.category.includes('top') && a.image_url !== null
-    );
-    // (a.url.includes('/news/') ||
-    //   a.url.includes('/exclusive/') ||
-    //   a.url.includes('/rubric-ato/') ||
-    //   a.url.includes('/news-isw-viyna-zvit/') ||
-    //   a.url.includes('/posts/') ||
-    //   a.url.includes('/war/') ||
-    //   a.url.includes('/ato/') ||
-    //   a.url.includes('/novyna/') ||
-    //   a.url.includes('/ukrayina/')) &&
-    // a.urlToImage !== null &&
-    // !a.url.includes('sport')
-    // );
+    const filtredAtcl = topNewsData.filter((a) => a.category.includes('top'));
     return filtredAtcl;
   }, [topNewsData]);
 
@@ -33,28 +20,25 @@ const Feed = () => {
         filterArticles.map((artcl, i) => (
           <div
             key={i}
-            className={`absolute align-middle w-[600px] md:w-full h-full scroll-none transition duration-700 transform ${
+            className={`absolute align-middle h-full scroll-none transition duration-500 transform w-[600px] md:w-full ${
               i === index.index
                 ? 'opacity-100 translate-x-0'
-                : 'opacity-0 translate-x-1/2'
+                : 'opacity-50 translate-x-1/2'
             }`}
           >
-            {i === index.index && (
-              <img
-                className="block w-full h-full mx-auto"
-                src={artcl.image_url || require('../../assest/img/image.png')}
-                loading="lazy"
-                alt="..."
-              />
-            )}
-            <h2 className="absolute bottom-1/3 left-4 lg:left-16 text-4xl leading-normal text-gray-100 lg:w-1/2 font-bold">
-              {artcl.title}
-            </h2>
-            <SliderControlers length={filterArticles.length} />
+            {i === index.index && <Image imgUrl={artcl.image_url} />}
           </div>
         ))
       ) : (
         <BallLoader color="white" />
+      )}
+      {filterArticles.length && !loading && (
+        <div className=" absolute w-1/2 bottom-1/2 md:bottom-1/3 left-2 md:left-16">
+          <h2 className="left-6 lg:left-16 text-4xl leading-normal text-gray-100 w-1/2 md:w-fit font-bold">
+            {filterArticles.find((_, i) => i === index.index)?.title}
+          </h2>
+          <SliderControlers length={filterArticles.length} />
+        </div>
       )}
       <SlidingArticles topArticles={filterArticles} />
     </section>

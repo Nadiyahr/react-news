@@ -24,7 +24,7 @@ const SliderControlers: React.FC<Props> = ({ length }) => {
   };
 
   return (
-    <div className="absolute w-1/2 bottom-1/4 left-16 px-3 flex gap-x-8 items-center">
+    <div className="px-3 flex gap-x-8 items-center">
       <button
         className="w-8 h-8 border border-gray-100 text-gray-100 rounded-full p-1 flex justify-center items-center text-xl"
         onClick={() => handlePrev(index.index)}

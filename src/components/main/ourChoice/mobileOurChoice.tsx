@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { IArticlesData, IArticlesDataGit } from '../../../react-app-env';
 import { SquarBtn } from '../../buttons/loadMoreBtns';
+import Image from '../../image';
 
 type Props = {
   data: IArticlesDataGit[];
@@ -15,27 +16,23 @@ const MobileOurChoice: React.FC<Props> = ({ data, trasformDate }) => {
   };
 
   return (
-    <div className="flex flex-wrap gap-y-2 w-screen p-2 md:p-6">
+    <div className="flex flex-wrap gap-y-2 w-screen p-4 min-h-fit md:p-6">
       {data.map((n, i) => {
         return (
           i < ofset && (
-            <div className="h-60 mb-10" key={i}>
-              <div className="h-2/3">
-                <img
-                  className="w-fit h-full"
-                  src={n.image_url || require('../../../assest/img/image.png')}
-                  alt=""
-                />
+            <div className="min-h-60 mb-10" key={i}>
+              <div className="h-2/3 mb-2">
+                <Image imgUrl={n.image_url} />
               </div>
-              <div className="max-h-16 flex-row pt-4 px-2">
-                <span className="text-xs">{trasformDate(n.pubDate)}</span>
-                <h3 className="mt-3">{n.title}</h3>
+              <span className="text-xs">{trasformDate(n.pubDate)}</span>
+              <div className="max-h-fit flex-row overflow-y-auto mt-2">
+                <h3 className="">{n.title}</h3>
               </div>
             </div>
           )
         );
       })}
-      <div className="px-2">
+      <div className="px-2 mt-2">
         <SquarBtn getMore={getMore} diffBorder={'border-blue-night'} />
       </div>
     </div>

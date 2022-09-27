@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../../context/GlobalContext';
 import ColumnArticles from './columnArticles';
-import LeftSideNews from './leftSideNews';
+import LeftSideNews from './rightSideNews';
 
 const Main = () => {
   const { isDesktopOrLaptop, isMobile, isTablet } = useContext(GlobalContext);
