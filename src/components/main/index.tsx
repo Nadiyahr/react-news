@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react';
-import { GlobalContext } from '../context/GlobalContext';
+import { GlobalContext } from '../../context/GlobalContext';
 import ColumnArticles from './columnArticles';
 import LeftSideNews from './leftSideNews';
 

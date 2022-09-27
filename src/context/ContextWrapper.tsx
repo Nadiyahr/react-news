@@ -1,8 +1,13 @@
 import { log } from 'console';
 import { useEffect, useReducer, useState } from 'react';
 import { useAsyncValue } from 'react-router-dom';
-import { IArticlesData, IArticlesDataGit, IData } from '../react-app-env';
-import { getAllArticles } from '../services/articles';
+import {
+  IArticlesData,
+  IArticlesDataGit,
+  IData,
+  IDataGit
+} from '../react-app-env';
+// import { getAllArticles } from '../services/articles';
 import { getAllArticlesForGit } from '../services/articlesGit';
 import { useMediaQuery } from 'react-responsive';
 import {
@@ -12,6 +17,7 @@ import {
   INewsContext,
   IndexState
 } from './GlobalContext';
+import { KHARKIV, KYIV, ODESSA, TOP } from '../services/varsApi';
 
 interface Props {
   children: JSX.Element;
@@ -42,58 +48,61 @@ const indexReducer = (state: IndexState, action: Action) => {
 type R = ReturnType<typeof indexReducer>;
 
 export const ContextWrapper: React.FC<Props> = ({ children }) => {
+  // const [topNewsData, setTopNewsData] = useState<IArticlesData[]>([]);
   const [totalResults, setTotalResults] = useState(0);
   const [loading, setLoading] = useState(true);
-  const [index, dispatchIndex] = useReducer<React.Reducer<R, Action>>(
-    indexReducer,
-    { index: 0 }
-  );
-  const [topNewsData, setTopNewsData] = useState<IArticlesData[]>([]);
-  // const [topNewsData, setTopNewsData] = useState<IArticlesDataGit[]>([]);
+  const [topNewsData, setTopNewsData] = useState<IArticlesDataGit[]>([]);
+  const [kyivNews, setKyivNews] = useState<IArticlesDataGit[]>([]);
+  const [odessaNews, setOdessaNews] = useState<IArticlesDataGit[]>([]);
+  const [kharkivNews, setKharkivNews] = useState<IArticlesDataGit[]>([]);
   const isDesktopOrLaptop = useMediaQuery({ minWidth: 992 });
   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 });
   const isMobile = useMediaQuery({ maxWidth: 767 });
   const isNotMobile = useMediaQuery({ minWidth: 768 });
-  // const Desktop = ({ children }) => {
-  //   const isDesktop = useMediaQuery({ minWidth: 992 })
-  //   return isDesktop ? children : null
-  // }
-  // const Tablet = ({ children }) => {
-  //   const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 991 })
-  //   return isTablet ? children : null
-  // }
-  // const Mobile = ({ children }) => {
-  //   const isMobile = useMediaQuery({ maxWidth: 767 })
-  //   return isMobile ? children : null
-  // }
-  // const Default = ({ children }) => {
-  //   const isNotMobile = useMediaQuery({ minWidth: 768 })
-  //   return isNotMobile ? children : null
-  // }
+  const [index, dispatchIndex] = useReducer<React.Reducer<R, Action>>(
+    indexReducer,
+    { index: 0 }
+  );
 
   useEffect(() => {
+    const getData = async () => {
+      await getAllArticlesForGit(TOP)
+        .then((response: IDataGit) => {
+          setTopNewsData(response.results);
+        })
+        .catch(console.error);
+      await getAllArticlesForGit(KYIV)
+        .then((response: IDataGit) => {
+          setKyivNews(response.results);
+        })
+        .catch(console.error);
+      await getAllArticlesForGit(ODESSA)
+        .then((response: IDataGit) => {
+          setOdessaNews(response.results);
+        })
+        .catch(console.error);
+      await getAllArticlesForGit(KHARKIV)
+        .then((response: IDataGit) => {
+          setKharkivNews(response.results);
+        })
+        .catch(console.error);
+
+      setLoading(false);
+    };
+
+    getData();
+
     // const getData = async () => {
-    //   await getAllArticlesForGit()
+    //   await getAllArticles()
     //     .then((response) => {
-    //       setTopNewsData(response.results);
+    //       setTopNewsData(response.articles);
     //       setLoading(false);
+    //       setTotalResults(9);
     //     })
     //     .catch(console.error);
     // };
 
     // getData();
-
-    const getData = async () => {
-      await getAllArticles()
-        .then((response) => {
-          setTopNewsData(response.articles);
-          setLoading(false);
-          setTotalResults(9);
-        })
-        .catch(console.error);
-    };
-
-    getData();
   }, []);
 
   return (
@@ -110,7 +119,10 @@ export const ContextWrapper: React.FC<Props> = ({ children }) => {
         isDesktopOrLaptop,
         isTablet,
         isMobile,
-        isNotMobile
+        isNotMobile,
+        kyivNews,
+        odessaNews,
+        kharkivNews
       }}
     >
       {children}

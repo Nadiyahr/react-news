@@ -1,32 +1,31 @@
 import { useState } from 'react';
 import { AiOutlineArrowRight } from 'react-icons/ai';
-import { IArticlesData, SizeColumn } from '../react-app-env';
+import {
+  IArticlesData,
+  IArticlesDataGit,
+  SizeColumn
+} from '../../../react-app-env';
+import { getTime } from '../../../assest/utils/utils';
+import { CircleBtn } from '../../buttons/loadMoreBtns';
 
 type Props = {
   title: string;
-  data: IArticlesData[];
+  data: IArticlesDataGit[];
 };
 
 const ColumnRgions: React.FC<Props> = ({ title, data }) => {
   const [selected, setSelected] = useState(0);
   const [rangeDisplayNews, setRangeDisplayNews] = useState([0, 5]);
 
-  const getTime = (time: Date) => {
-    return new Date(time).toLocaleTimeString(navigator.language, {
-      hour: '2-digit',
-      minute: '2-digit'
-    });
-  };
-
   const loadMore = () => {
-    const newRange = rangeDisplayNews.map((x) => x + 9);
+    const newRange = rangeDisplayNews.map((x) => x + 3);
 
     setRangeDisplayNews(newRange);
   };
 
   return (
-    <section className="relative bg-white border rounded-md p-6 w-[290px] h-[760px]">
-      <div className="flex justify-between items-center text-blue-main">
+    <section className="relative bg-white border rounded-md p-4 md:p-6 min-w-[290px]">
+      <div className="text-blue-main">
         <h4 className="block text-2xl font-semibold pb-8">{title}</h4>
       </div>
       <div className=" overflow-clip min-h-[85%] max-h-[85%] no-sctollbar">
@@ -36,7 +35,7 @@ const ColumnRgions: React.FC<Props> = ({ title, data }) => {
               <div key={i} className="ms:w-64 mb-6 blue-main">
                 <h3>
                   <time className="font-thin text-sm text-gray-400 leading-5">
-                    {getTime(artcl.publishedAt)}
+                    {getTime(artcl.pubDate)}
                   </time>
                   {'  '}
                   {artcl.title}
@@ -47,13 +46,8 @@ const ColumnRgions: React.FC<Props> = ({ title, data }) => {
           }
         })}
       </div>
-      <div className=" sticky bottom-0 left-0 pt-10">
-        <button className=" flex w-full justify-start gap-x-8 items-center font-medium text-blue-900">
-          <span className="blue-main">Більше новин</span>
-          <div className="border rounded-full p-2">
-            <AiOutlineArrowRight />
-          </div>
-        </button>
+      <div className="absolute w-full bottom-5 left-0 pt-16 px-6 bg-gradient-to-t from-white to-white/70 ">
+        <CircleBtn getMore={loadMore} />
       </div>
     </section>
   );

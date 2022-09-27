@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { IArticlesData } from '../react-app-env';
-import SquarBtn from './buttons/squarBtn';
+import { IArticlesData, IArticlesDataGit } from '../../../react-app-env';
+import { SquarBtn } from '../../buttons/loadMoreBtns';
 
 type Props = {
-  data: IArticlesData[];
+  data: IArticlesDataGit[];
   trasformDate: (d: Date) => string;
 };
 
@@ -23,12 +23,12 @@ const MobileOurChoice: React.FC<Props> = ({ data, trasformDate }) => {
               <div className="h-2/3">
                 <img
                   className="w-fit h-full"
-                  src={n.urlToImage || require('../assest/img/image.png')}
+                  src={n.image_url || require('../../../assest/img/image.png')}
                   alt=""
                 />
               </div>
               <div className="max-h-16 flex-row pt-4 px-2">
-                <span className="text-xs">{trasformDate(n.publishedAt)}</span>
+                <span className="text-xs">{trasformDate(n.pubDate)}</span>
                 <h3 className="mt-3">{n.title}</h3>
               </div>
             </div>

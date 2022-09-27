@@ -13,10 +13,10 @@ export type IndexState = {
 };
 
 export interface INewsContext {
-  topNewsData: IArticlesData[] | [];
-  setTopNewsData: (data: IArticlesData[]) => void;
-  // topNewsData: IArticlesDataGit[] | [];
-  // setTopNewsData: (data: IArticlesDataGit[]) => void;
+  // topNewsData: IArticlesData[] | [];
+  // setTopNewsData: (data: IArticlesData[]) => void;
+  topNewsData: IArticlesDataGit[] | [];
+  setTopNewsData: (data: IArticlesDataGit[]) => void;
   totalResults: number;
   setTotalResults: (totRes: number) => void;
   loading: boolean;
@@ -27,6 +27,9 @@ export interface INewsContext {
   isTablet: boolean;
   isMobile: boolean;
   isNotMobile: boolean;
+  kyivNews: IArticlesDataGit[] | [];
+  odessaNews: IArticlesDataGit[] | [];
+  kharkivNews: IArticlesDataGit[] | [];
 }
 
 export const defaultState = {
@@ -41,7 +44,10 @@ export const defaultState = {
   isDesktopOrLaptop: false,
   isTablet: false,
   isMobile: false,
-  isNotMobile: true
+  isNotMobile: true,
+  kyivNews: [],
+  odessaNews: [],
+  kharkivNews: []
 };
 
 export const GlobalContext = React.createContext<INewsContext>(defaultState);

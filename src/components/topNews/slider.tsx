@@ -9,8 +9,8 @@ import {
 
 const Slider = () => {
   return (
-    <div className="px-4 lg:pl-16 py-1 flex bg-blue-night relative">
-      <div className="flex absolute gap-x-10 overflow-x-auto no-sctollbar w-[88%]">
+    <div className="px-6 md:px-4 lg:pl-16 py-1 flex bg-blue-night relative text-sm">
+      <div className="flex absolute gap-x-10 overflow-x-auto no-sctollbar w-[98%] md:w-[88%]">
         <div className="flex text-white gap-x-10 animate-scroll-text whitespace-nowrap">
           <span className="flex gap-x-2">
             <span className="pt-1">
@@ -89,7 +89,7 @@ const Slider = () => {
           </span>
         </div>
       </div>
-      <div className="text-white h-full from-blue-night bg-gradient-to-r backdrop-blur-sm min-w-[190px] sticky top-0 right-[91%]">
+      <div className="text-white h-full bg-blue-night from-blue-night bg-gradient-to-r backdrop-blur-sm min-w-[90px] md:min-w-[190px] sticky top-0 md:right-[91%] pr-1 ">
         131&nbsp;день&nbsp;війни:
       </div>
     </div>

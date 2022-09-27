@@ -1,9 +1,9 @@
 import { useContext } from 'react';
-import { GlobalContext } from '../context/GlobalContext';
-import { IArticlesData, IArticlesDataGit } from '../react-app-env';
+import { GlobalContext } from '../../context/GlobalContext';
+import { IArticlesData, IArticlesDataGit } from '../../react-app-env';
 
 type Props = {
-  topArticles: IArticlesData[];
+  topArticles: IArticlesDataGit[];
 };
 
 const SlidingArticles: React.FC<Props> = ({ topArticles }) => {
@@ -21,7 +21,7 @@ const SlidingArticles: React.FC<Props> = ({ topArticles }) => {
           >
             <div className="flex gap-x-2 px-2 py-3">
               <img
-                src={artcl.urlToImage || ''}
+                src={artcl.image_url || ''}
                 alt=".."
                 className="block w-16 h-12"
               />

@@ -1,6 +1,6 @@
 import NavBar from './navbar';
 import NavSections from './navsections';
-import Slider from './slider';
+import Slider from '../topNews/slider';
 
 type Layout = {
   children: React.ReactNode;

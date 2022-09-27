@@ -1,16 +1,12 @@
 import { useContext, useMemo } from 'react';
-import { GlobalContext } from '../context/GlobalContext';
-import { IArticlesData } from '../react-app-env';
+import { GlobalContext } from '../../../context/GlobalContext';
+import { IArticlesData, IArticlesDataGit } from '../../../react-app-env';
 import DesctopOurChoice from './desctopOurChoice';
 import MobileOurChoice from './mobileOurChoice';
 
 const OurChoices = () => {
   const { topNewsData, isDesktopOrLaptop, isMobile, isTablet } =
     useContext(GlobalContext);
-
-  console.log('isMobile', isMobile);
-  console.log('isTablet', isTablet);
-  console.log('isDesktopOrLaptop', isDesktopOrLaptop);
 
   const trasformDate = (d: Date) => {
     const date = new Date(d);
@@ -26,20 +22,22 @@ const OurChoices = () => {
       .toUpperCase();
   };
 
-  const ourChoices = useMemo((): IArticlesData[] => {
+  const ourChoices = useMemo((): IArticlesDataGit[] => {
     return topNewsData.filter(
-      (a) =>
-        (a.url.includes('/news/') ||
-          a.url.includes('/exclusive/') ||
-          a.url.includes('/rubric-ato/') ||
-          a.url.includes('/news-isw-viyna-zvit/') ||
-          a.url.includes('/posts/') ||
-          a.url.includes('/war/') ||
-          a.url.includes('/ato/') ||
-          a.url.includes('/novyna/') ||
-          a.url.includes('/ukrayina/')) &&
-        !a.url.includes('sport')
+      (a) => a.category.includes('top') && a.image_url !== null
     );
+    //   (a) =>
+    //     (a.url.includes('/news/') ||
+    //       a.url.includes('/exclusive/') ||
+    //       a.url.includes('/rubric-ato/') ||
+    //       a.url.includes('/news-isw-viyna-zvit/') ||
+    //       a.url.includes('/posts/') ||
+    //       a.url.includes('/war/') ||
+    //       a.url.includes('/ato/') ||
+    //       a.url.includes('/novyna/') ||
+    //       a.url.includes('/ukrayina/')) &&
+    //     !a.url.includes('sport')
+    // );
   }, [topNewsData]);
   return (
     <section>

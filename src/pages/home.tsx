@@ -1,5 +1,5 @@
 import Layout from '../components/layout';
-import Feed from '../components/feed';
+import Feed from '../components/topNews/feed';
 import Main from '../components/main';
 
 const Home = () => {

@@ -1,6 +1,6 @@
 import { useContext } from 'react';
 import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
-import { GlobalContext } from '../context/GlobalContext';
+import { GlobalContext } from '../../context/GlobalContext';
 
 type Props = {
   length: number;
