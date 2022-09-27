@@ -4,7 +4,7 @@ import ColumnArticles from '../columnArticles';
 import ColumnRgions from './columsRegions';
 
 const Regions = () => {
-  const { topNewsData, isDesktopOrLaptop, isTablet } =
+  const { kharkivNews, kyivNews, odessaNews, isDesktopOrLaptop, isTablet } =
     useContext(GlobalContext);
 
   return (
@@ -20,17 +20,17 @@ const Regions = () => {
       </div>
       {isDesktopOrLaptop && (
         <div className="grid grid-cols-3 gap-4 place-content-stretch h-screen">
-          <ColumnRgions title="Київ" data={topNewsData} />
-          <ColumnRgions title="Одеса" data={topNewsData} />
-          <ColumnRgions title="Харків" data={topNewsData} />
+          <ColumnRgions title="Київ" data={kyivNews} />
+          <ColumnRgions title="Одеса" data={odessaNews} />
+          <ColumnRgions title="Харків" data={kharkivNews} />
         </div>
       )}
       {isTablet && (
         <div className="px-2 py-2 overflow-hiden no-sctollbar w-screen">
           <div className="flex overflow-x-auto no-sctollbar gap-x-4">
-            <ColumnRgions title="Київ" data={topNewsData} />
-            <ColumnRgions title="Одеса" data={topNewsData} />
-            <ColumnRgions title="Харків" data={topNewsData} />
+            <ColumnRgions title="Київ" data={kyivNews} />
+            <ColumnRgions title="Одеса" data={odessaNews} />
+            <ColumnRgions title="Харків" data={kharkivNews} />
           </div>
         </div>
       )}

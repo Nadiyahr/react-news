@@ -24,7 +24,7 @@ const ColumnArticles = () => {
   }, [topNewsData]);
 
   return (
-    <section className="relative bg-white border rounded-md p-6 w-screen lg:w-[300px] h-fit lg:h-[1370px]">
+    <section className="relative bg-white border rounded-md p-6 w-screen lg:w-[300px] h-fit lg:min-h-[1416px]">
       <div className="flex justify-between items-center text-blue-main">
         <h4
           className={`block text-2xl font-semibold ${
