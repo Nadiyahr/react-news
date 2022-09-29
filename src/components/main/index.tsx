@@ -18,7 +18,7 @@ const Main = () => {
   }, [isDesktopOrLaptop]);
 
   return (
-    <main className={`bg-neutral-200 ${style}`}>
+    <main id="main" className={`bg-neutral-200 ${style}`}>
       <ColumnArticles />
       <LeftSideNews />
     </main>

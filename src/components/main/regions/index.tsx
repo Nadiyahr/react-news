@@ -13,7 +13,7 @@ const Regions = () => {
   } = useContext(GlobalContext);
 
   return (
-    <section className="mt-12 md:min-h-1/2">
+    <section className="mt-12 md:min-h-1/2" id="main">
       <div className="flex justify-between px-1">
         <h3 className="text-3xl font-bold pb-6 text-neutral-700">Регіони</h3>
         <a

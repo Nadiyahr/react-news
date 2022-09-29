@@ -3,7 +3,7 @@ import Image from '../../image';
 
 type Props = {
   data: IArticlesDataGit[];
-  trasformDate: (d: Date) => string;
+  trasformDate: (d: string) => string;
 };
 
 const DesctopOurChoice: React.FC<Props> = ({ data, trasformDate }) => {

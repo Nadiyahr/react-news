@@ -23,7 +23,10 @@ const ColumnRgions: React.FC<Props> = ({ title, data }) => {
   };
 
   return (
-    <section className="relative bg-white border rounded-md p-4 md:p-6 min-w-[290px] h-full">
+    <section
+      id={`#${title.toLowerCase()}`}
+      className="relative bg-white border rounded-md p-4 md:p-6 min-w-[90%] h-full"
+    >
       <div className="text-blue-main">
         <h4 className="block text-2xl font-semibold pb-8">{title}</h4>
       </div>

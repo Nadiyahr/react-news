@@ -1,5 +1,5 @@
 type Props = {
-  imgUrl: string;
+  imgUrl: string | null;
 };
 
 const Image: React.FC<Props> = ({ imgUrl }) => {

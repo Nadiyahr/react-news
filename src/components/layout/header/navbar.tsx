@@ -1,4 +1,4 @@
-import { useCallback, useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { TbMenu, TbSearch, TbMinusVertical } from 'react-icons/tb';
 import {
   FaFacebook,
@@ -7,28 +7,34 @@ import {
   FaYoutube,
   FaSearch
 } from 'react-icons/fa';
-import { GlobalContext } from '../../context/GlobalContext';
+import { GlobalContext } from '../../../context/GlobalContext';
+import MenuNav from './menuNav';
+import { cities } from '../../../assest/vars';
 
 const NavBar: React.FC = () => {
   const { isNotMobile, isMobile } = useContext(GlobalContext);
   const [title, setTitle] = useState('');
   const [search, setSearch] = useState(false);
+  const [togleNav, setTogleNav] = useState(false);
   return (
-    <nav className="px-6 py-4 md:px-16 text-base flex justify-between font-medium border border-gray-200">
+    <nav className="relative px-6 py-4 md:px-16 text-base flex justify-between font-medium border border-gray-200">
       <div className="flex items-center gap-x-4">
-        <button className="flex text-lg bg-gray-ligt hover:bg-gray-200 cursor-pointer rounded py-1 px-2">
+        <button
+          onClick={() => setTogleNav(!togleNav)}
+          className="flex text-lg bg-gray-ligt hover:bg-gray-200 cursor-pointer rounded py-1 px-2"
+        >
           <span className="pt-1 pr-2">
             <TbMenu />
           </span>
           Меню
         </button>
-        {isNotMobile && (
-          <>
-            <button>Київ</button>
-            <button>Одеса</button>
-            <button>Харків</button>
-          </>
-        )}
+        <MenuNav close={setTogleNav} isClose={togleNav} />
+        {isNotMobile &&
+          cities.map((city, i) => (
+            <button key={i} className="capitalize">
+              {city}
+            </button>
+          ))}
       </div>
       <div className="relative w-max flex justify-evenly items-center gap-x-2 md:gap-x-4">
         {(search || isNotMobile) && (

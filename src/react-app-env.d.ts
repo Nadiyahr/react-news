@@ -30,13 +30,13 @@ interface IData {
 interface IArticlesDataGit {
   title: string;
   link: string;
-  keywords: null | string;
-  creator: null | string;
+  keywords: null | string[];
+  creator: null | string[];
   video_url: null | string;
-  description: string;
+  description: null | string;
   content: null | string;
-  pubDate: Date;
-  image_url: string;
+  pubDate: string;
+  image_url: null | string;
   source_id: string;
   country: string[];
   category: string[];

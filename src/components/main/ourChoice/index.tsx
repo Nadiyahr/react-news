@@ -1,26 +1,13 @@
 import { useContext, useMemo } from 'react';
 import { GlobalContext } from '../../../context/GlobalContext';
-import { IArticlesData, IArticlesDataGit } from '../../../react-app-env';
+import { IArticlesDataGit } from '../../../react-app-env';
 import DesctopOurChoice from './desctopOurChoice';
 import MobileOurChoice from './mobileOurChoice';
+import { trasformDate } from '../../../assest/utils/utils';
 
 const OurChoices = () => {
   const { topNewsData, isDesktopOrLaptop, isMobile, isTablet } =
     useContext(GlobalContext);
-
-  const trasformDate = (d: Date) => {
-    const date = new Date(d);
-
-    return date
-      .toLocaleString('uk-UK', {
-        month: 'long',
-        day: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric'
-      })
-      .replace(/ о /, ':')
-      .toUpperCase();
-  };
 
   const ourChoices = useMemo((): IArticlesDataGit[] => {
     return topNewsData.filter((a) => a.category.includes('top'));

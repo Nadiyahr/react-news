@@ -1,6 +1,6 @@
 import { useContext, useState } from 'react';
 import { AiTwotoneFire } from 'react-icons/ai';
-import { GlobalContext } from '../../context/GlobalContext';
+import { GlobalContext } from '../../../context/GlobalContext';
 
 const NavSections = () => {
   const { isNotMobile } = useContext(GlobalContext);
