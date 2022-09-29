@@ -28,7 +28,7 @@ const NavBar: React.FC = () => {
           </span>
           Меню
         </button>
-        <MenuNav close={setTogleNav} isClose={togleNav} />
+        <MenuNav open={setTogleNav} isOpen={togleNav} />
         {isNotMobile &&
           cities.map((city, i) => (
             <button key={i} className="capitalize">

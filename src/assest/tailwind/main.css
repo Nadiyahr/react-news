@@ -834,6 +834,9 @@ video {
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
 .flex-row {
   flex-direction: row;
 }
@@ -864,6 +867,9 @@ video {
 .gap-4 {
   gap: 1rem;
 }
+.gap-28 {
+  gap: 7rem;
+}
 .gap-x-1 {
   column-gap: 0.25rem;
 }
@@ -888,6 +894,9 @@ video {
 .gap-y-2 {
   row-gap: 0.5rem;
 }
+.gap-x-28 {
+  column-gap: 7rem;
+}
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -907,6 +916,9 @@ video {
 }
 .overflow-y-auto {
   overflow-y: auto;
+}
+.overscroll-contain {
+  overscroll-behavior: contain;
 }
 .whitespace-nowrap {
   white-space: nowrap;
