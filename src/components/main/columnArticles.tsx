@@ -4,7 +4,7 @@ import { AiTwotoneFire } from 'react-icons/ai';
 import { getTime } from '../../assest/utils/utils';
 import { GlobalContext } from '../../context/GlobalContext';
 import { IArticlesDataGit } from '../../react-app-env';
-import { SquarBtn } from '../buttons/loadMoreBtns';
+import { SquarBtn } from '../buttons/LoadMoreBtns';
 
 const ColumnArticles = () => {
   const { topNewsData, totalResults, setTotalResults } =

@@ -6,7 +6,7 @@ import {
   SizeColumn
 } from '../../../react-app-env';
 import { getTime } from '../../../assest/utils/utils';
-import { CircleBtn } from '../../buttons/loadMoreBtns';
+import { CircleBtn } from '../../buttons/LoadMoreBtns';
 
 type Props = {
   title: string;

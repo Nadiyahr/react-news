@@ -18,9 +18,13 @@ const MenuNav: React.FC<Props> = ({ open, isOpen }) => {
   const [openSelect, setOpenSelect] = useState<number | null>(null);
   const sectionsKeys = Object.keys(sections);
 
-  useEffect(() => {
-    console.log(isOpen);
-  }, [isOpen]);
+  const handleClickClose = () => {
+    open(!isOpen);
+    setOpenSelect(null);
+  };
+
+  const handleClickSelect = (idx: number) =>
+    setOpenSelect((prev) => (prev === idx ? null : idx));
 
   return (
     <div
@@ -30,16 +34,15 @@ const MenuNav: React.FC<Props> = ({ open, isOpen }) => {
     >
       <div className=" sticky top-0 left-0 flex justify-between px-6 py-3 text-white pb-2 border-b-2 bg-blue-night/80">
         <div>Меню</div>
-        <button onClick={() => open(!isOpen)} className="text-white text-sm">
+        <button onClick={handleClickClose} className="text-white text-sm">
           <FaTimes />
         </button>
       </div>
       <ul className=" items-center">
         {sectionsKeys.map((section, i) => (
-          <>
+          <div key={i}>
             <button
-              onClick={() => setOpenSelect((prev) => (prev === i ? null : i))}
-              key={i}
+              onClick={() => handleClickSelect(i)}
               className=" flex justify-between w-3/4 mx-6 py-2 items-center capitalize border-b-2"
             >
               {/* <Link to="/" onClick={() => close(false)}>
@@ -54,9 +57,9 @@ const MenuNav: React.FC<Props> = ({ open, isOpen }) => {
             </button>
             {openSelect !== null && openSelect === i && (
               <div className="mb-2">
-                {sections[section as keyof typeof sections].map((subS, i) => (
+                {sections[section as keyof typeof sections].map((subS, idx) => (
                   <div
-                    key={i}
+                    key={`${idx}s`}
                     className="flex justify-between w-4/6 mx-8 py-1 items-center capitalize border-b-2 border-grey-200/50"
                   >
                     {/* <HashLink
@@ -74,7 +77,7 @@ const MenuNav: React.FC<Props> = ({ open, isOpen }) => {
                 ))}
               </div>
             )}
-          </>
+          </div>
         ))}
       </ul>
     </div>

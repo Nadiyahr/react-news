@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { IArticlesData, IArticlesDataGit } from '../../../react-app-env';
-import { SquarBtn } from '../../buttons/loadMoreBtns';
+import { SquarBtn } from '../../buttons/LoadMoreBtns';
 import Image from '../../image';
 
 type Props = {

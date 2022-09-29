@@ -13,7 +13,7 @@ const Main = () => {
     }
 
     if (isDesktopOrLaptop) {
-      setStyle('flex p-16 w-fill');
+      setStyle('flex p-16 pb-0 w-fill');
     }
   }, [isDesktopOrLaptop]);
 

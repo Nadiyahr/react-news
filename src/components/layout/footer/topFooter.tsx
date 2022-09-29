@@ -1,28 +1,18 @@
 import { useEffect } from 'react';
-import { sections } from '../../../assest/vars';
+import { about, sections } from '../../../assest/vars';
+import Column from './column';
 
 const TopFooter = () => {
   const sectionsKeys = Object.keys(sections);
-  useEffect(() => {
-    // console.log(Object.keys(sections));
-  });
+
   return (
-    <div className="grid grid-cols-6 gap-x-28 place-content-stretch h-full p-16">
-      <div>
-        {sectionsKeys.map((section, i) => {
-          if (i < 4) {
-            return (
-              <>
-                <h4 key={i}>{section}</h4>
-                {sections[section as keyof typeof sections].length < 0 &&
-                  sections[section as keyof typeof sections].map(
-                    (subS, idx) => <h6 key={idx}>{subS}</h6>
-                  )}
-              </>
-            );
-          }
-        })}
-      </div>
+    <div className="grid grid-cols-6 place-content-stretch h-full p-16">
+      <Column keysSec={sectionsKeys} options={sections} range={[0, 3]} />
+      <Column keysSec={sectionsKeys} options={sections} range={[4, 5]} />
+      <Column keysSec={sectionsKeys} options={sections} range={[6, 7]} />
+      <Column keysSec={sectionsKeys} options={sections} range={[8, 9]} />
+      <Column keysSec={sectionsKeys} options={sections} range={[10, 11]} />
+      <Column keysSec={about} />
     </div>
   );
 };
