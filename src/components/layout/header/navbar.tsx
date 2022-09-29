@@ -10,6 +10,7 @@ import {
 import { GlobalContext } from '../../../context/GlobalContext';
 import MenuNav from './menuNav';
 import { cities } from '../../../assest/vars';
+import SocialBtns from '../../buttons/SocialBtns';
 
 const NavBar: React.FC = () => {
   const { isNotMobile, isMobile } = useContext(GlobalContext);
@@ -68,25 +69,10 @@ const NavBar: React.FC = () => {
           </div>
         )}
         {isNotMobile && (
-          <>
-            <button className="text-gray-icon pt-2 px-1">
-              <FaFacebook />
-            </button>
-            <button className="text-gray-icon pt-2 px-1">
-              <FaTelegram />
-            </button>
-            <button className="text-gray-icon pt-2 px-1">
-              <FaInstagramSquare />
-            </button>
-            <button className="text-gray-icon pt-2 px-1">
-              <FaYoutube />
-            </button>
-            <button className="text-gray-icon pt-2 px-1">
-              <TbMinusVertical />
-            </button>
-            <button className="text-gray-400 pt-2 px-1 text-light">RU</button>
-            <button className="text-gray-icon pt-2 px-1 text-light">UA</button>
-          </>
+          <SocialBtns
+            isColor={false}
+            classN={'flex justify-evenly items-center gap-x-2 md:gap-x-4'}
+          />
         )}
       </div>
     </nav>

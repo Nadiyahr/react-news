@@ -6,8 +6,9 @@ import {
   FaChevronUp
 } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { sections } from '../../../assest/vars';
+import { useOutsideClick } from '../../../assest/utils/utils';
 
 type Props = {
   open: (value: boolean) => void;
@@ -15,8 +16,11 @@ type Props = {
 };
 
 const MenuNav: React.FC<Props> = ({ open, isOpen }) => {
+  const ref = useRef(null);
   const [openSelect, setOpenSelect] = useState<number | null>(null);
   const sectionsKeys = Object.keys(sections);
+
+  useOutsideClick(ref, () => open(false));
 
   const handleClickClose = () => {
     open(!isOpen);
@@ -28,6 +32,7 @@ const MenuNav: React.FC<Props> = ({ open, isOpen }) => {
 
   return (
     <div
+      ref={ref}
       className={`fixed top-0 left-0 w-3/5 lg:w-1/5 h-screen bg-white z-10 border-r-2 overflow-auto no-sctollbar overscroll-contain border-blue-night/60 transform duration-700 ${
         isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
       }`}

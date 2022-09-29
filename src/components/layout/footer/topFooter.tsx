@@ -6,7 +6,7 @@ const TopFooter = () => {
   const sectionsKeys = Object.keys(sections);
 
   return (
-    <div className="grid grid-cols-6 place-content-stretch h-full p-16">
+    <div className="grid grid-cols-6 place-content-stretch h-full px-16 py-6">
       <Column keysSec={sectionsKeys} options={sections} range={[0, 3]} />
       <Column keysSec={sectionsKeys} options={sections} range={[4, 5]} />
       <Column keysSec={sectionsKeys} options={sections} range={[6, 7]} />

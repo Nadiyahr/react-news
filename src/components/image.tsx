@@ -11,7 +11,7 @@ const Image: React.FC<Props> = ({ imgUrl }) => {
           e.currentTarget.src = require('../assest/img/image.png');
         }}
         src={imgUrl === null ? require('../assest/img/image.png') : imgUrl}
-        alt=""
+        alt="foto"
       />
     </>
   );

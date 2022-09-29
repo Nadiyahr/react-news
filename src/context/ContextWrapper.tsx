@@ -51,39 +51,40 @@ export const ContextWrapper: React.FC<Props> = ({ children }) => {
   );
 
   useEffect(() => {
-    // const getData = async () => {
-    //   await getAllArticlesForGit(TOP)
-    //     .then((response: IDataGit) => {
-    // setTopNewsData(response.results);
-    // setKyivNews(response.results);
-    // setOdessaNews(response.results);
-    // setKharkivNews(response.results);
-    // })
-    // .catch(console.error);
-    setTopNewsData(json.results);
-    setKyivNews(json.results);
-    setOdessaNews(json.results);
-    setKharkivNews(json.results);
-    // await getAllArticlesForGit(KYIV)
-    //   .then((response: IDataGit) => {
-    //     setKyivNews(response.results);
-    //   })
-    //   .catch(console.error);
-    // await getAllArticlesForGit(ODESSA)
-    //   .then((response: IDataGit) => {
-    //     setOdessaNews(response.results);
-    //   })
-    //   .catch(console.error);
-    // await getAllArticlesForGit(KHARKIV)
-    //   .then((response: IDataGit) => {
-    //     setKharkivNews(response.results);
-    //   })
-    //   .catch(console.error);
+    const getData = async () => {
+      await getAllArticlesForGit(TOP)
+        .then((response: IDataGit) => {
+          setTopNewsData(response.results);
+          setKyivNews(response.results);
+          setOdessaNews(response.results);
+          setKharkivNews(response.results);
+        })
+        .catch(console.error);
+      await getAllArticlesForGit(KYIV)
+        .then((response: IDataGit) => {
+          setKyivNews(response.results);
+        })
+        .catch(console.error);
+      await getAllArticlesForGit(ODESSA)
+        .then((response: IDataGit) => {
+          setOdessaNews(response.results);
+        })
+        .catch(console.error);
+      await getAllArticlesForGit(KHARKIV)
+        .then((response: IDataGit) => {
+          setKharkivNews(response.results);
+        })
+        .catch(console.error);
 
-    setLoading(false);
-    // };
+      // setTopNewsData(json.results);
+      // setKyivNews(json.results);
+      // setOdessaNews(json.results);
+      // setKharkivNews(json.results);
 
-    // getData();
+      setLoading(false);
+    };
+
+    getData();
   }, []);
 
   return (
