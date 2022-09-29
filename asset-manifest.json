@@ -1,14 +1,23 @@
 {
   "files": {
-    "main.css": "/react-news/static/css/main.e5af483d.css",
-    "main.js": "/react-news/static/js/main.b84af92d.js",
+    "main.css": "/react-news/static/css/main.e1d254e2.css",
+    "main.js": "/react-news/static/js/main.caa7c47c.js",
+    "static/media/shadow.png": "/react-news/static/media/shadow.18a93e0a34542be6e8ed.png",
     "static/media/image.png": "/react-news/static/media/image.1f14d9211ec40b085464.png",
+    "static/media/news_google_icon.svg": "/react-news/static/media/news_google_icon.3dee9a39defa0bc6d0cab528a96cdb9b.svg",
+    "static/media/instagram_logo_icon.svg": "/react-news/static/media/instagram_logo_icon.b41c3f5dfc9e7a945f44.svg",
+    "static/media/icons8-instagram.svg": "/react-news/static/media/icons8-instagram.8ff7ce92ad753b591ed4.svg",
+    "static/media/tiktok_logo_icon.svg": "/react-news/static/media/tiktok_logo_icon.dd1192208455e5094264.svg",
+    "static/media/facebook_logo_icon.svg": "/react-news/static/media/facebook_logo_icon.8ab44a828aa24a7ef183.svg",
+    "static/media/telegram_logo_icon.svg": "/react-news/static/media/telegram_logo_icon.205925a01c94b9f8adae.svg",
+    "static/media/youtube_logo_icon.svg": "/react-news/static/media/youtube_logo_icon.834d953a82254ee8c92f.svg",
     "index.html": "/react-news/index.html",
-    "main.e5af483d.css.map": "/react-news/static/css/main.e5af483d.css.map",
-    "main.b84af92d.js.map": "/react-news/static/js/main.b84af92d.js.map"
+    "static/media/shadow.svg": "/react-news/static/media/shadow.e87450d75d508e5249d8.svg",
+    "main.e1d254e2.css.map": "/react-news/static/css/main.e1d254e2.css.map",
+    "main.caa7c47c.js.map": "/react-news/static/js/main.caa7c47c.js.map"
   },
   "entrypoints": [
-    "static/css/main.e5af483d.css",
-    "static/js/main.b84af92d.js"
+    "static/css/main.e1d254e2.css",
+    "static/js/main.caa7c47c.js"
   ]
 }
