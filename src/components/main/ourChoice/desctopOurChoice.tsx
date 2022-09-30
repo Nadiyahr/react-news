@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { IArticlesData, IArticlesDataGit } from '../../../react-app-env';
 import Image from '../../image';
 
@@ -18,10 +19,12 @@ const DesctopOurChoice: React.FC<Props> = ({ data, trasformDate }) => {
                   <Image imgUrl={n.image_url} />
                 </div>
                 <div className="max-h-16 flex-row pt-4">
-                  <span className="text-xs mb-3">
+                  <span className="text-xs mb-3 cursor-pointer">
                     {trasformDate(n.pubDate)}
                   </span>
-                  <h3 className=" mt-3">{n.title}</h3>
+                  <Link to="/" className="block text-blue-night b mt-3">
+                    {n.title}
+                  </Link>
                 </div>
               </div>
             )

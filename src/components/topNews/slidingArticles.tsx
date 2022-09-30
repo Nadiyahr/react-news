@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { GlobalContext } from '../../context/GlobalContext';
 import { IArticlesDataGit } from '../../react-app-env';
 
@@ -28,7 +29,9 @@ const SlidingArticles: React.FC<Props> = ({ topArticles }) => {
                 alt=".."
                 className="block w-16 h-12"
               />
-              <div className=" p-0 h-12 overflow-hidden">{artcl.title}</div>
+              <Link className="p-0 py h-12 overflow-hidden text-center" to="/">
+                {artcl.title}
+              </Link>
             </div>
           </div>
         ))}

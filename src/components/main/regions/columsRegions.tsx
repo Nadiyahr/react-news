@@ -7,6 +7,7 @@ import {
 } from '../../../react-app-env';
 import { getTime } from '../../../assest/utils/utils';
 import { CircleBtn } from '../../buttons/LoadMoreBtns';
+import { Link } from 'react-router-dom';
 
 type Props = {
   title: string;
@@ -25,7 +26,7 @@ const ColumnRgions: React.FC<Props> = ({ title, data }) => {
   return (
     <section
       id={`#${title.toLowerCase()}`}
-      className="relative bg-white border rounded-md p-4 md:p-6 min-w-[90%] h-full"
+      className="relative bg-white border rounded-md p-4 md:p-6 min-w-[90%] min-h-full"
     >
       <div className="text-blue-main">
         <h4 className="block text-2xl font-semibold pb-8">{title}</h4>
@@ -40,7 +41,9 @@ const ColumnRgions: React.FC<Props> = ({ title, data }) => {
                     {getTime(artcl.pubDate)}
                   </time>
                   {'  '}
-                  {artcl.title}
+                  <Link to="/" className="block text-blue-night b mt-3">
+                    {artcl.title}
+                  </Link>
                 </h3>
                 <hr className="my-3" />
               </div>

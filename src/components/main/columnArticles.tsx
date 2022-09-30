@@ -5,6 +5,7 @@ import { getTime } from '../../assest/utils/utils';
 import { GlobalContext } from '../../context/GlobalContext';
 import { IArticlesDataGit } from '../../react-app-env';
 import { SquarBtn } from '../buttons/LoadMoreBtns';
+import { Link } from 'react-router-dom';
 
 const ColumnArticles = () => {
   const { topNewsData, totalResults, setTotalResults } =
@@ -24,7 +25,7 @@ const ColumnArticles = () => {
   }, [topNewsData]);
 
   return (
-    <section className="relative bg-white border rounded-md p-6 w-screen lg:w-[300px] h-full">
+    <section className="relative bg-white border rounded-md p-6 w-screen lg:w-[300px] min-h-full">
       <div className="flex justify-between items-center text-blue-main">
         <h4
           className={`block text-2xl font-semibold ${
@@ -56,30 +57,27 @@ const ColumnArticles = () => {
       <div className=" overflow-y-auto h-[90%] no-sctollbar">
         {topNews.map((artcl, i) => {
           return (
-            <div key={i} className="ms:w-64 mb-6 blue-main">
+            <div key={i} className="ms:w-64 blue-main py-6">
               {artcl.image_url !== null && (
                 <span className=" flex gap-x-3 items-center mb-2 text-gray-400 text-sm">
                   <FaCamera />
                   Новина з фото
                 </span>
               )}
-              {artcl.link !== null &&
-                artcl.link.includes(
-                  '/rubric-ato/' || '/news-isw-viyna-zvit/'
-                ) && (
-                  <span className=" flex gap-x-3 items-center mb-2 text-orange-400 text-sm">
-                    <AiTwotoneFire />
-                    Термінова новина
-                  </span>
-                )}
-              <h3>
+              {artcl.category.includes('war') && (
+                <span className=" flex gap-x-3 items-center mb-2 text-orange-400 text-sm">
+                  <AiTwotoneFire />
+                  Термінова новина
+                </span>
+              )}
+              <h3 className="leading-6 whitespace-normal">
                 <time className="font-thin text-sm text-gray-400 leading-5">
                   {getTime(artcl.pubDate)}
+                  {'  '}
                 </time>
-                {'  '}
-                {artcl.title}
+                <Link to="/">{artcl.title}</Link>
               </h3>
-              <hr className="my-3" />
+              <hr className="mt-6" />
             </div>
           );
         })}

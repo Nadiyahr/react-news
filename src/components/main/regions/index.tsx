@@ -14,7 +14,7 @@ const Regions = () => {
 
   return (
     <section className="mt-12 md:min-h-1/2" id="main">
-      <div className="flex justify-between px-1">
+      <div className="flex justify-between px-1 min-h-[10%]">
         <h3 className="text-3xl font-bold pb-6 text-neutral-700">Регіони</h3>
         <a
           href="/"
@@ -24,7 +24,7 @@ const Regions = () => {
         </a>
       </div>
       {isDesktopOrLaptop && (
-        <div className="grid grid-cols-3 gap-4 place-content-stretch h-full">
+        <div className="grid grid-cols-3 gap-4 place-content-stretch">
           <ColumnRgions title="Київ" data={kyivNews} />
           <ColumnRgions title="Одеса" data={odessaNews} />
           <ColumnRgions title="Харків" data={kharkivNews} />

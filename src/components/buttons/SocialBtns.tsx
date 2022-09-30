@@ -79,7 +79,7 @@ const SocialBtns: React.FC<Props> = ({ isColor, classN }) => {
           href={network.icon.href}
           key={i}
           className={`${
-            network.icon.faIcon === null
+            !isColor && network.icon.faIcon === null
               ? 'hidden'
               : 'pt-2 px-1 text-gray-icon flex gap-x-2'
           }`}
@@ -91,7 +91,7 @@ const SocialBtns: React.FC<Props> = ({ isColor, classN }) => {
                 className="w-5"
                 src={require(`../../assest/img/${network.icon.src}`)}
               />
-              <span className=" text-sm font-normal leading-5 text-blue-night">
+              <span className=" text-sm font-normal leading-5 text-blue-night hover:text-blue-900">
                 {network.name}
               </span>
             </>
