@@ -1,9 +1,20 @@
 import { useEffect, useReducer, useState } from 'react';
-import { IArticlesDataGit, IDataGit } from '../react-app-env';
+import {
+  IArticlesDataGit,
+  Icons,
+  IDataGit,
+  IIcinData,
+  IStatisticsData,
+  IStatistics
+} from '../react-app-env';
 import { getAllArticlesForGit } from '../services/articlesGit';
 import { useMediaQuery } from 'react-responsive';
 import { Action, GlobalContext, IndexState } from './GlobalContext';
 import { KHARKIV, KYIV, ODESSA, TOP } from '../services/varsApi';
+import {
+  getLatestStatistics,
+  getStatisticsIcons
+} from '../services/statisticsWar';
 import json from '../assest/json/newsGitExample.json';
 
 interface Props {
@@ -37,6 +48,8 @@ type R = ReturnType<typeof indexReducer>;
 export const ContextWrapper: React.FC<Props> = ({ children }) => {
   const [totalResults, setTotalResults] = useState(0);
   const [loading, setLoading] = useState(true);
+  const [warIcons, setWarIcons] = useState<Icons | null>(null);
+  const [warStatistics, setWarStatistics] = useState<IStatistics | null>(null);
   const [topNewsData, setTopNewsData] = useState<IArticlesDataGit[]>([]);
   const [kyivNews, setKyivNews] = useState<IArticlesDataGit[]>([]);
   const [odessaNews, setOdessaNews] = useState<IArticlesDataGit[]>([]);
@@ -87,6 +100,23 @@ export const ContextWrapper: React.FC<Props> = ({ children }) => {
     getData();
   }, []);
 
+  useEffect(() => {
+    const getWarStatistics = async () => {
+      await getStatisticsIcons()
+        .then((response: IIcinData) => {
+          setWarIcons(response.data);
+        })
+        .catch((res) => console.log(res));
+      await getLatestStatistics()
+        .then((response: IStatisticsData) => {
+          setWarStatistics(response.data);
+        })
+        .catch((res) => console.log(res));
+    };
+
+    getWarStatistics();
+  }, []);
+
   return (
     <GlobalContext.Provider
       value={{
@@ -104,7 +134,11 @@ export const ContextWrapper: React.FC<Props> = ({ children }) => {
         isNotMobile,
         kyivNews,
         odessaNews,
-        kharkivNews
+        kharkivNews,
+        warIcons,
+        setWarIcons,
+        warStatistics,
+        setWarStatistics
       }}
     >
       {children}

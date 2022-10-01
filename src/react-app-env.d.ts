@@ -1,3 +1,4 @@
+import { INewsContext } from './context/GlobalContext';
 import { type } from 'os';
 /// <reference types="react-scripts" />
 
@@ -57,4 +58,62 @@ type LoadButton = {
 type SizeColumn = {
   width: string;
   height: string;
+};
+
+interface IStatisticsData {
+  message: string;
+  data: Statistics;
+}
+
+interface IStatistics {
+  date: string;
+  day: number;
+  resource: string;
+  stats: Stats;
+  increase: Stats;
+}
+
+type Stats = {
+  personnel_units: number;
+  tanks: number;
+  armoured_fighting_vehicles: number;
+  artillery_systems: number;
+  mlrs: number;
+  aa_warfare_systems: number;
+  planes: number;
+  helicopters: number;
+  vehicles_fuel_tanks: number;
+  warships_cutters: number;
+  cruise_missiles: number;
+  uav_systems: number;
+  special_military_equip: number;
+  atgm_srbm_systems: number;
+};
+
+interface IIcinData {
+  message: string;
+  data: Icons;
+}
+
+type Icons = {
+  personnel_units: IconData;
+  tanks: IconData;
+  armoured_fighting_vehicles: IconData;
+  artillery_systems: IconData;
+  mlrs: IconData;
+  aa_warfare_systems: IconData;
+  planes: IconData;
+  helicopters: IconData;
+  vehicles_fuel_tanks: IconData;
+  warships_cutters: IconData;
+  uav_systems: IconData;
+  atgm_srbm_systems: IconData;
+  cruise_missiles: IconData;
+  special_military_equip: IconData;
+};
+
+type IconData = {
+  title: string;
+  icon: string;
+  stats?: number;
 };

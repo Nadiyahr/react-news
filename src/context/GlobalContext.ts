@@ -1,5 +1,5 @@
 import React from 'react';
-import { IArticlesDataGit } from '../react-app-env';
+import { IArticlesDataGit, Icons, IStatistics } from '../react-app-env';
 
 export type ActionType = 'PREV' | 'NEXT' | 'SET';
 
@@ -28,6 +28,10 @@ export interface INewsContext {
   kyivNews: IArticlesDataGit[] | [];
   odessaNews: IArticlesDataGit[] | [];
   kharkivNews: IArticlesDataGit[] | [];
+  warIcons: Icons | null;
+  setWarIcons: (data: Icons) => void;
+  warStatistics: IStatistics | null;
+  setWarStatistics: (data: IStatistics) => void;
 }
 
 export const defaultState = {
@@ -45,7 +49,11 @@ export const defaultState = {
   isNotMobile: true,
   kyivNews: [],
   odessaNews: [],
-  kharkivNews: []
+  kharkivNews: [],
+  warIcons: null,
+  setWarIcons: () => {},
+  warStatistics: null,
+  setWarStatistics: () => {}
 };
 
 export const GlobalContext = React.createContext<INewsContext>(defaultState);

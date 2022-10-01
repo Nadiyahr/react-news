@@ -34,8 +34,8 @@ module.exports = {
         }
       },
       animation: {
-        'scroll-text': 'slide 25s linear infinite',
-        'scroll-text2': 'slide 25s linear infinite',
+        'scroll-text': 'slide 70s linear infinite',
+        'scroll-text2': 'slide 70s linear infinite',
         'beat-load': 'beat 1s infinite'
       }
     }

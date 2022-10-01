@@ -9,7 +9,7 @@ const Main = () => {
 
   useEffect(() => {
     if (isMobile || isTablet) {
-      setStyle('flex-row p-0 w-screen');
+      setStyle('flex-row p-0 w-screen min-h-[120px]');
     }
 
     if (isDesktopOrLaptop) {

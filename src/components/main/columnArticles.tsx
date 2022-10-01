@@ -25,7 +25,7 @@ const ColumnArticles = () => {
   }, [topNewsData]);
 
   return (
-    <section className="relative bg-white border rounded-md p-6 w-screen lg:w-[300px] min-h-full">
+    <section className="relative bg-white border rounded-md p-6 w-screen lg:w-[300px] min-h-full max-h-full">
       <div className="flex justify-between items-center text-blue-main">
         <h4
           className={`block text-2xl font-semibold ${
@@ -57,7 +57,7 @@ const ColumnArticles = () => {
       <div className=" overflow-y-auto h-[90%] no-sctollbar">
         {topNews.map((artcl, i) => {
           return (
-            <div key={i} className="ms:w-64 blue-main py-6">
+            <div key={i} className="ms:w-64 blue-main py-2">
               {artcl.image_url !== null && (
                 <span className=" flex gap-x-3 items-center mb-2 text-gray-400 text-sm">
                   <FaCamera />

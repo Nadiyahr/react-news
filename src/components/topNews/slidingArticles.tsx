@@ -29,7 +29,7 @@ const SlidingArticles: React.FC<Props> = ({ topArticles }) => {
                 alt=".."
                 className="block w-16 h-12"
               />
-              <Link className="p-0 py h-12 overflow-hidden text-center" to="/">
+              <Link className="p-0 py h-12 overflow-hidden" to="/">
                 {artcl.title}
               </Link>
             </div>

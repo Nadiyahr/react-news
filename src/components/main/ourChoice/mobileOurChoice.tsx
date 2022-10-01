@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { IArticlesData, IArticlesDataGit } from '../../../react-app-env';
 import { SquarBtn } from '../../buttons/LoadMoreBtns';
 import Image from '../../image';
@@ -26,7 +27,9 @@ const MobileOurChoice: React.FC<Props> = ({ data, trasformDate }) => {
               </div>
               <span className="text-xs">{trasformDate(n.pubDate)}</span>
               <div className="max-h-fit flex-row overflow-y-auto mt-2">
-                <h3 className="">{n.title}</h3>
+                <Link to="/" className="block text-blue-night b mt-3">
+                  {n.title}
+                </Link>
               </div>
             </div>
           )

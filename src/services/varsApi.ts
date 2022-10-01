@@ -10,3 +10,7 @@ export const WAR = '&q=війна%20OR%20обстріл%20окупант';
 export const KYIV = '&q=Київ';
 export const ODESSA = '&q=Одеса';
 export const KHARKIV = '&q=Харків';
+
+export const STATISTICS_URL = 'https://russianwarship.rip/api/v1/';
+export const STATISTICS = 'statistics/latest';
+export const ICONS = 'terms/ua';
