@@ -552,8 +552,17 @@ video {
 .top-4 {
   top: 1rem;
 }
+.right-0 {
+  right: 0px;
+}
+.bottom-0 {
+  bottom: 0px;
+}
 .z-10 {
   z-index: 10;
+}
+.-z-50 {
+  z-index: -50;
 }
 .mx-6 {
   margin-left: 1.5rem;
@@ -745,6 +754,9 @@ video {
 }
 .min-w-\[90\%\] {
   min-width: 90%;
+}
+.min-w-full {
+  min-width: 100%;
 }
 .flex-shrink-0 {
   flex-shrink: 0;
@@ -1034,6 +1046,9 @@ video {
 .bg-blue-night {
   --tw-bg-opacity: 1;
   background-color: rgb(18 27 48 / var(--tw-bg-opacity));
+}
+.bg-stone-600\/75 {
+  background-color: rgb(87 83 78 / 0.75);
 }
 .bg-gradient-to-t {
   background-image: linear-gradient(to top, var(--tw-gradient-stops));
