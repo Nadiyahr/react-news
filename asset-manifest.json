@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-news/static/css/main.a7d45560.css",
-    "main.js": "/react-news/static/js/main.dfbda2cc.js",
+    "main.css": "/react-news/static/css/main.3f10b00e.css",
+    "main.js": "/react-news/static/js/main.014d4c9d.js",
     "static/media/shadow.png": "/react-news/static/media/shadow.18a93e0a34542be6e8ed.png",
     "static/media/image.png": "/react-news/static/media/image.1f14d9211ec40b085464.png",
     "static/media/news_google_icon.svg": "/react-news/static/media/news_google_icon.3dee9a39defa0bc6d0cab528a96cdb9b.svg",
@@ -13,11 +13,11 @@
     "static/media/youtube_logo_icon.svg": "/react-news/static/media/youtube_logo_icon.834d953a82254ee8c92f.svg",
     "index.html": "/react-news/index.html",
     "static/media/shadow.svg": "/react-news/static/media/shadow.e87450d75d508e5249d8.svg",
-    "main.a7d45560.css.map": "/react-news/static/css/main.a7d45560.css.map",
-    "main.dfbda2cc.js.map": "/react-news/static/js/main.dfbda2cc.js.map"
+    "main.3f10b00e.css.map": "/react-news/static/css/main.3f10b00e.css.map",
+    "main.014d4c9d.js.map": "/react-news/static/js/main.014d4c9d.js.map"
   },
   "entrypoints": [
-    "static/css/main.a7d45560.css",
-    "static/js/main.dfbda2cc.js"
+    "static/css/main.3f10b00e.css",
+    "static/js/main.014d4c9d.js"
   ]
 }
