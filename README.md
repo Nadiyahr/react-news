@@ -1,6 +1,7 @@
 # News landing React
 
 [Preview](https://nadiyahr.github.io/react-news/)
+
 [Resume](https://drive.google.com/file/d/1xAXHvcGjuNONbOKzXd27IDgq04Lul__e/view?usp=sharing)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and styled with [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss)
