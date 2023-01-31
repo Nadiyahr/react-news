@@ -13,10 +13,7 @@ const Slider = () => {
       return keys.map(
         (key: string): IconData => ({
           title: warTitles[key as keyof Icons].title,
-          icon: warIcons[key as keyof Icons].icon.replace(
-            /icons/,
-            'icons-dark'
-          ),
+          icon: warIcons[key as keyof Icons].icon,
           stats: warStatistics.stats[key as keyof Stats]
         })
       );
@@ -31,7 +28,7 @@ const Slider = () => {
         <div className="flex text-white gap-x-10 animate-scroll-text whitespace-nowrap">
           {statisticsWithIcons.map((stat, i) => (
             <span key={i} className="flex gap-x-2">
-              <span className=" w-7">
+              <span className="icon-war">
                 <img src={stat.icon} alt={stat.title} className="inline" />
               </span>
               {stat.title}
@@ -39,11 +36,10 @@ const Slider = () => {
             </span>
           ))}
         </div>
-        {/* animate-scroll-text2 animate-scroll-text pt-1 */}
         <div className="flex text-white gap-x-10 animate-scroll-text2 whitespace-nowrap">
           {statisticsWithIcons.map((stat, i) => (
             <span key={i} className="flex gap-x-2 items-center">
-              <span className=" w-7">
+              <span className="icon-war">
                 <img src={stat.icon} alt={stat.title} className="inline" />
               </span>
               {stat.title}
@@ -52,7 +48,7 @@ const Slider = () => {
           ))}
         </div>
       </div>
-      <div className="text-white h-full from-blue-night bg-gradient-to-r backdrop-blur-sm min-w-[90px] md:min-w-[190px] sticky top-0 md:right-[91%] pr-1 ">
+      <div className="text-white h-full from-blue-night bg-gradient-to-r backdrop-blur-sm min-w-[90px] md:min-w-[190px] sticky top-0 md:right-[91%] pr-1 h-6">
         <a href="https://russianwarship.rip/" target="blanck">
           {warStatistics !== null && warStatistics.day}&nbsp;день&nbsp;війни:
         </a>

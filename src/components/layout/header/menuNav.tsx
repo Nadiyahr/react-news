@@ -37,7 +37,7 @@ const MenuNav: React.FC<Props> = ({ open, isOpen }) => {
         isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-full'
       }`}
     >
-      <div className=" sticky top-0 left-0 flex justify-between px-6 py-3 text-white pb-2 border-b-2 bg-blue-night/80">
+      <div className=" sticky top-0 left-0 flex justify-between px-6 py-3 text-white pb-2 border-b-2 bg-blue-night">
         <div>Меню</div>
         <button onClick={handleClickClose} className="text-white text-sm">
           <FaTimes />

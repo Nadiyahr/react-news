@@ -32,7 +32,7 @@ const VideoSection = () => {
   const videos = ['8Xtcd9qSMeU', 'P_1iiDSb7FM', 'JpTL53Su4U8', 'CwQl49tDPTk'];
   const firstVideo =
     topNewsData.find((x) => x.video_url !== null)?.video_url ||
-    'https://www.youtube.com/embed/UXe4i9-VZQA&modestbranding=1';
+    'https://www.youtube.com/embed/UXe4i9-VZQA';
 
   useEffect(() => {
     const getTitle = async () => {
@@ -92,7 +92,6 @@ const VideoSection = () => {
                   width="304"
                   height="171"
                   src={`https://www.youtube.com/embed/${video}`}
-                  frameBorder="1"
                   color="white"
                   allowFullScreen
                 ></iframe>
