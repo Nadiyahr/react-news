@@ -980,6 +980,9 @@ video {
 .bg-top-color {
   background-color: #3c373acc;
 }
+.bg-top {
+  background-image: linear-gradient(180deg, #7b93ec 0%, #f4ea60 100%);
+}
 .bg-stone-800\/\[0\.4\] {
   background-color: rgb(41 37 36 / 0.4);
 }

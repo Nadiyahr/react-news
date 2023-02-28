@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { GlobalContext } from '../../context/GlobalContext';
 import { IArticlesDataGit } from '../../react-app-env';
+import Image from '../image';
 
 type Props = {
   topArticles: IArticlesDataGit[];
@@ -10,7 +11,7 @@ type Props = {
 const SlidingArticles: React.FC<Props> = ({ topArticles }) => {
   const { index, dispatchIndex } = useContext(GlobalContext);
   return (
-    <div className="px-0 md:px-3 lg:px-16 py-1 overflow-hiden sticky no-sctollbar top-[77%] left-2 w-screen">
+    <div className="px-0 md:px-3 lg:px-16 py-1 overflow-hiden sticky no-sctollbar top-[77%] left-2 w-screen z-20">
       <div className="flex overflow-x-auto no-sctollbar gap-x-7 snap-x">
         {topArticles.map((artcl, i) => (
           <div
@@ -23,7 +24,7 @@ const SlidingArticles: React.FC<Props> = ({ topArticles }) => {
             <div className="flex gap-x-2 px-2 py-3">
               <img
                 onError={(e) => {
-                  e.currentTarget.src = require('../../assest/img/image.png');
+                  e.currentTarget.src = require('../../assest/img/no-img.png');
                 }}
                 src={artcl.image_url || ''}
                 alt=".."

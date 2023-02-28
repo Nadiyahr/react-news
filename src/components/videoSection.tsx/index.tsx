@@ -48,12 +48,10 @@ const VideoSection = () => {
       await axios
         .get(`https://noembed.com/embed?dataType=json&url=${firstVideo}`)
         .then((res) => {
-          console.log('topNewsData', topNewsData);
           return res;
         })
         // eslint-disable-next-line no-console
         .then(({ data }) => {
-          console.log('fetch', data);
           setTitle(data.title);
         });
     };
@@ -68,16 +66,9 @@ const VideoSection = () => {
             width="580"
             height="400"
             src={firstVideo}
-            frameBorder="1"
             color="white"
             allowFullScreen
           ></iframe>
-          {/* <iframe
-            width="560"
-            height="315"
-            src={firstVideo}
-            frameBorder="0"
-          ></iframe> */}
           <div className="p-6 w-full">
             <h3 className="text-3xl leading-10 font-semibold text-white">
               {title['8Xtcd9qSMeU']}
@@ -109,7 +100,6 @@ const VideoSection = () => {
         width="304"
         height="117"
         src={`${firstVideo}`}
-        frameBorder="0"
         color="white"
         allowFullScreen
         className=" absolute top-0 left-0 min-w-full min-h-full -z-50"

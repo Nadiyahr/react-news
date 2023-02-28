@@ -89,11 +89,6 @@ export const ContextWrapper: React.FC<Props> = ({ children }) => {
         })
         .catch(console.error);
 
-      // setTopNewsData(json.results);
-      // setKyivNews(json.results);
-      // setOdessaNews(json.results);
-      // setKharkivNews(json.results);
-
       setLoading(false);
     };
 

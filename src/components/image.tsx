@@ -6,11 +6,11 @@ const Image: React.FC<Props> = ({ imgUrl }) => {
   return (
     <>
       <img
-        className="block w-full h-full"
+        className="block w-full h-full o"
         onError={(e) => {
-          e.currentTarget.src = require('../assest/img/image.png');
+          e.currentTarget.src = require('../assest/img/no-img.png');
         }}
-        src={imgUrl === null ? require('../assest/img/image.png') : imgUrl}
+        src={imgUrl || ''}
         alt="foto"
       />
     </>

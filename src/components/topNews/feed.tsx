@@ -15,15 +15,13 @@ const Feed = () => {
   }, [topNewsData]);
 
   return (
-    <section className="h-[480px] w-screen md:h-screen overflow-x-hiden no-sctollbar select-none relative bg-top-color">
+    <section className="h-[480px] w-screen md:h-screen overflow-x-hiden no-sctollbar select-none relative bg-top">
       {filterArticles.length && !loading ? (
         filterArticles.map((artcl, i) => (
           <div
             key={i}
-            className={`absolute align-middle h-full scroll-none transition duration-500 transform w-[600px] md:w-full ${
-              i === index.index
-                ? 'opacity-100 translate-x-0'
-                : 'opacity-50 translate-x-1/2'
+            className={`absolute align-middle h-full scroll-none transition duration-1000 transform w-[600px] md:w-full ${
+              i === index.index ? 'opacity-100' : 'opacity-50'
             }`}
           >
             {i === index.index && <Image imgUrl={artcl.image_url} />}

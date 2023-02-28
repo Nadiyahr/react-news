@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { IArticlesData, IArticlesDataGit } from '../../../react-app-env';
+import { IArticlesDataGit } from '../../../react-app-env';
 import Image from '../../image';
 
 type Props = {
